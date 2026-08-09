@@ -1,0 +1,56 @@
+{
+  "id": "moon",
+  "slug": "moon",
+  "name": "Bulan",
+  "category": "moon",
+  "shortDescription": "Satelit alami Bumi, benda langit terdekat yang pernah didatangi manusia secara langsung.",
+
+  "physical": {
+    "diameterKm": 3474,
+    "massKg": 7.342e22,
+    "gravityMs2": 1.62
+  },
+  "orbital": {
+    "orbitalPeriodDays": 27.3
+  },
+  "rotation": {
+    "dayLengthHours": 708
+  },
+  "moons": 0,
+
+  "overview": [
+    "Bulan adalah satu-satunya satelit alami Bumi, mengorbit pada jarak rata-rata sekitar 384.400 km — jauh lebih dekat dibanding jarak Bumi ke planet mana pun.",
+    "Karena terkunci secara gravitasi (tidally locked) dengan Bumi, Bulan selalu menunjukkan sisi yang sama ke arah kita — sisi jauhnya baru bisa dilihat lewat foto wahana antariksa.",
+    "Permukaan Bulan dipenuhi kawah tumbukan dan dataran gelap luas yang disebut 'maria', bekas aliran lava purba miliaran tahun lalu."
+  ],
+
+  "didYouKnow": [
+    "Satu siklus penuh terang-gelap di Bulan (dari purnama ke purnama berikutnya) berlangsung sekitar 29,5 hari Bumi.",
+    "Suhu di permukaan Bulan berubah drastis, dari sekitar 127°C di siang hari hingga -173°C di malam hari, karena nyaris tidak memiliki atmosfer.",
+    "Bulan menjauh dari Bumi sekitar 3,8 cm setiap tahun akibat efek pasang surut gravitasi."
+  ],
+
+  "missions": [
+    {
+      "name": "Apollo 11",
+      "launchYear": 1969,
+      "status": "completed",
+      "summary": "Misi yang membawa manusia pertama kali mendarat dan berjalan di permukaan Bulan, pada Juli 1969."
+    },
+    {
+      "name": "Artemis I",
+      "launchYear": 2022,
+      "status": "completed",
+      "summary": "Uji terbang tanpa awak NASA mengelilingi Bulan, langkah awal program yang bertujuan mengembalikan manusia ke permukaannya."
+    }
+  ],
+
+  "sources": [
+    {
+      "name": "NASA Science — Earth's Moon",
+      "url": "https://science.nasa.gov/moon/"
+    }
+  ],
+  "dataUpdatedAt": "2026-08-09"
+}
+    

@@ -1,0 +1,51 @@
+{
+  "id": "neptune",
+  "slug": "neptune",
+  "name": "Neptunus",
+  "category": "planet",
+  "shortDescription": "Planet terjauh dari Matahari, dikenal dengan angin terkencang di tata surya.",
+
+  "physical": {
+    "diameterKm": 49244,
+    "massKg": 1.02413e26,
+    "gravityMs2": 11.15,
+    "meanTemperatureC": -200
+  },
+  "orbital": {
+    "distanceFromSunKm": 4495000000,
+    "orbitalPeriodDays": 60190
+  },
+  "rotation": {
+    "dayLengthHours": 16.1
+  },
+  "moons": 16,
+
+  "overview": [
+    "Neptunus adalah planet terjauh dari Matahari sejak Pluto direklasifikasi sebagai planet katai pada 2006.",
+    "Planet ini dikenal memiliki angin terkencang di tata surya, dengan kecepatan yang bisa mencapai lebih dari 2.000 km/jam.",
+    "Warna birunya yang pekat, seperti Uranus, berasal dari gas metana di atmosfernya."
+  ],
+
+  "didYouKnow": [
+    "Neptunus ditemukan lewat perhitungan matematis sebelum benar-benar diamati — para astronom memprediksi keberadaannya dari gangguan gravitasi pada orbit Uranus.",
+    "Satu tahun di Neptunus setara dengan sekitar 165 tahun Bumi.",
+    "Triton, bulan terbesar Neptunus, mengorbit berlawanan arah dengan rotasi planetnya — petunjuk bahwa ia mungkin dulunya adalah objek yang tertangkap gravitasi Neptunus."
+  ],
+
+  "missions": [
+    {
+      "name": "Voyager 2",
+      "launchYear": 1977,
+      "status": "completed",
+      "summary": "Satu-satunya wahana yang pernah mengunjungi Neptunus, melintas pada 1989 dan menemukan bulan Triton lebih dekat."
+    }
+  ],
+
+  "sources": [
+    {
+      "name": "NASA/JPL Solar System Exploration — Neptune",
+      "url": "https://solarsystem.nasa.gov/planets/neptune/overview/"
+    }
+  ],
+  "dataUpdatedAt": "2026-08-09"
+}

@@ -1,0 +1,51 @@
+{
+  "id": "saturn",
+  "slug": "saturn",
+  "name": "Saturnus",
+  "category": "planet",
+  "shortDescription": "Terkenal dengan sistem cincinnya yang mencolok, tersusun dari jutaan partikel es dan batu.",
+
+  "physical": {
+    "diameterKm": 116460,
+    "massKg": 5.6834e26,
+    "gravityMs2": 10.44,
+    "meanTemperatureC": -140
+  },
+  "orbital": {
+    "distanceFromSunKm": 1434000000,
+    "orbitalPeriodDays": 10759
+  },
+  "rotation": {
+    "dayLengthHours": 10.7
+  },
+  "moons": 146,
+
+  "overview": [
+    "Saturnus paling dikenal karena sistem cincinnya yang megah, tersusun dari jutaan partikel es dan batu berbagai ukuran.",
+    "Seperti Jupiter, Saturnus adalah raksasa gas dengan kepadatan sangat rendah — lebih rendah dari air, menjadikannya planet paling 'ringan' di tata surya.",
+    "Saturnus memiliki puluhan bulan, termasuk Titan yang memiliki atmosfer tebal dan danau metana cair di permukaannya."
+  ],
+
+  "didYouKnow": [
+    "Cincin Saturnus terlihat sangat lebar namun sangat tipis — ketebalannya hanya sekitar puluhan meter di banyak bagian.",
+    "Titan, bulan terbesar Saturnus, adalah satu-satunya satelit alami di tata surya yang diketahui memiliki atmosfer padat.",
+    "Jumlah bulan Saturnus yang terkonfirmasi melonjak tajam setelah gelombang penemuan bulan-bulan kecil dalam beberapa tahun terakhir."
+  ],
+
+  "missions": [
+    {
+      "name": "Cassini-Huygens",
+      "launchYear": 1997,
+      "status": "completed",
+      "summary": "Mengorbit Saturnus dari 2004 hingga 2017 dan mengirim wahana Huygens mendarat di permukaan Titan pada 2005."
+    }
+  ],
+
+  "sources": [
+    {
+      "name": "NASA/JPL Solar System Exploration — Saturn",
+      "url": "https://solarsystem.nasa.gov/planets/saturn/overview/"
+    }
+  ],
+  "dataUpdatedAt": "2026-08-09"
+}

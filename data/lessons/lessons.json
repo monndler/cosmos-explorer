@@ -1,0 +1,89 @@
+[
+  {
+    "id": "apa-itu-astronomi",
+    "slug": "apa-itu-astronomi",
+    "title": "Apa itu Astronomi?",
+    "category": "dasar-astronomi",
+    "summary": "Pengantar tentang apa yang dipelajari astronomi dan bagaimana ilmuwan mengamati langit."
+  },
+  {
+    "id": "skala-alam-semesta",
+    "slug": "skala-alam-semesta",
+    "title": "Skala Alam Semesta",
+    "category": "dasar-astronomi",
+    "summary": "Membangun intuisi seberapa besar jarak dan ukuran di alam semesta, dari Bumi hingga galaksi."
+  },
+  {
+    "id": "alat-bantu-teleskop",
+    "slug": "alat-bantu-teleskop",
+    "title": "Alat Bantu: Teleskop",
+    "category": "dasar-astronomi",
+    "summary": "Bagaimana teleskop bekerja dan mengapa alat ini mengubah cara manusia memahami langit."
+  },
+
+  {
+    "id": "delapan-planet",
+    "slug": "delapan-planet",
+    "title": "Delapan Planet",
+    "category": "tata-surya",
+    "summary": "Mengenal delapan planet yang mengorbit Matahari, dari yang terdekat hingga terjauh."
+  },
+  {
+    "id": "matahari-sebagai-bintang",
+    "slug": "matahari-sebagai-bintang",
+    "title": "Matahari sebagai Bintang",
+    "category": "tata-surya",
+    "summary": "Mengapa Matahari diklasifikasikan sebagai bintang, dan perannya bagi tata surya."
+  },
+  {
+    "id": "bulan-dan-satelit-alami",
+    "slug": "bulan-dan-satelit-alami",
+    "title": "Bulan dan Satelit Alami",
+    "category": "tata-surya",
+    "summary": "Perbedaan antara satelit alami dan buatan, serta peran Bulan bagi Bumi."
+  },
+
+  {
+    "id": "bintang-dan-siklus-hidupnya",
+    "slug": "bintang-dan-siklus-hidupnya",
+    "title": "Bintang dan Siklus Hidupnya",
+    "category": "deep-space",
+    "summary": "Bagaimana bintang lahir, bersinar selama miliaran tahun, lalu berakhir."
+  },
+  {
+    "id": "galaksi-bimasakti",
+    "slug": "galaksi-bimasakti",
+    "title": "Galaksi Bimasakti",
+    "category": "deep-space",
+    "summary": "Rumah tata surya kita di alam semesta yang luas — struktur dan skala galaksi Bimasakti."
+  },
+  {
+    "id": "black-hole",
+    "slug": "black-hole",
+    "title": "Black Hole",
+    "category": "deep-space",
+    "summary": "Apa sebenarnya lubang hitam, dan mengapa gravitasinya begitu ekstrem."
+  },
+
+  {
+    "id": "sejarah-peluncuran-roket",
+    "slug": "sejarah-peluncuran-roket",
+    "title": "Sejarah Peluncuran Roket",
+    "category": "eksplorasi",
+    "summary": "Perjalanan singkat dari roket pertama hingga wahana yang menjangkau luar tata surya."
+  },
+  {
+    "id": "pendaratan-di-bulan",
+    "slug": "pendaratan-di-bulan",
+    "title": "Pendaratan di Bulan",
+    "category": "eksplorasi",
+    "summary": "Bagaimana misi Apollo membawa manusia pertama kali menginjakkan kaki di Bulan."
+  },
+  {
+    "id": "rover-di-mars",
+    "slug": "rover-di-mars",
+    "title": "Rover di Mars",
+    "category": "eksplorasi",
+    "summary": "Bagaimana rover seperti Curiosity dan Perseverance menjelajahi permukaan Mars dari jarak jutaan kilometer."
+  }
+]

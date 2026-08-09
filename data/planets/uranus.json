@@ -1,0 +1,51 @@
+{
+  "id": "uranus",
+  "slug": "uranus",
+  "name": "Uranus",
+  "category": "planet",
+  "shortDescription": "Raksasa es yang berotasi hampir menyamping, membuatnya seolah 'berguling' saat mengorbit Matahari.",
+
+  "physical": {
+    "diameterKm": 50724,
+    "massKg": 8.681e25,
+    "gravityMs2": 8.69,
+    "meanTemperatureC": -195
+  },
+  "orbital": {
+    "distanceFromSunKm": 2871000000,
+    "orbitalPeriodDays": 30687
+  },
+  "rotation": {
+    "dayLengthHours": 17.2
+  },
+  "moons": 27,
+
+  "overview": [
+    "Uranus adalah raksasa es yang unik karena porosnya miring hampir 98 derajat, membuatnya seolah 'berguling' saat mengorbit Matahari.",
+    "Warna kebiruan-hijaunya berasal dari gas metana di atmosfernya yang menyerap cahaya merah.",
+    "Uranus memiliki sistem cincin, meski jauh lebih samar dan redup dibanding cincin Saturnus."
+  ],
+
+  "didYouKnow": [
+    "Karena kemiringan porosnya yang ekstrem, setiap kutub Uranus mengalami sekitar 42 tahun siang terus-menerus, diikuti 42 tahun malam.",
+    "Uranus adalah planet pertama yang ditemukan menggunakan teleskop, oleh William Herschel pada 1781.",
+    "Uranus berotasi retrograde seperti Venus, meski arah kemiringan sumbunya jauh lebih ekstrem."
+  ],
+
+  "missions": [
+    {
+      "name": "Voyager 2",
+      "launchYear": 1977,
+      "status": "completed",
+      "summary": "Satu-satunya wahana yang pernah terbang dekat Uranus, melintas pada 1986 dan mengirim data pertama dari jarak dekat."
+    }
+  ],
+
+  "sources": [
+    {
+      "name": "NASA/JPL Solar System Exploration — Uranus",
+      "url": "https://solarsystem.nasa.gov/planets/uranus/overview/"
+    }
+  ],
+  "dataUpdatedAt": "2026-08-09"
+}

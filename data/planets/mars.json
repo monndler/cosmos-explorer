@@ -1,0 +1,63 @@
+{
+  "id": "mars",
+  "slug": "mars",
+  "name": "Mars",
+  "category": "planet",
+  "shortDescription": "Planet keempat dari Matahari. Permukaannya dingin, berbatu, dan memiliki banyak bukti bahwa air pernah mengalir di masa lalu.",
+
+  "physical": {
+    "diameterKm": 6779,
+    "massKg": 6.4171e23,
+    "gravityMs2": 3.72,
+    "meanTemperatureC": -63
+  },
+  "orbital": {
+    "distanceFromSunKm": 227900000,
+    "orbitalPeriodDays": 687
+  },
+  "rotation": {
+    "dayLengthHours": 24.6
+  },
+  "moons": 2,
+
+  "overview": [
+    "Mars sering disebut 'Planet Merah' karena warna permukaannya yang kemerahan, akibat oksida besi (karat) pada debu dan batuannya.",
+    "Atmosfernya sangat tipis dan sebagian besar terdiri dari karbon dioksida, sehingga tidak mampu menahan panas dengan baik — suhu di Mars bisa berubah drastis antara siang dan malam.",
+    "Para ilmuwan menemukan bukti kuat bahwa air pernah mengalir di permukaan Mars miliaran tahun lalu, termasuk pola seperti lembah sungai kering dan mineral yang biasanya terbentuk di air."
+  ],
+
+  "didYouKnow": [
+    "Mars memiliki gunung berapi tertinggi di tata surya, Olympus Mons, dengan tinggi sekitar 21,9 km — hampir 2,5 kali tinggi Gunung Everest.",
+    "Satu hari di Mars (disebut 'sol') berlangsung sekitar 24 jam 37 menit — hanya sedikit lebih panjang dari satu hari di Bumi.",
+    "Dua bulan Mars, Phobos dan Deimos, berukuran kecil dan berbentuk tidak beraturan — banyak ilmuwan menduga keduanya adalah asteroid yang tertangkap gravitasi Mars."
+  ],
+
+  "missions": [
+    {
+      "name": "Perseverance Rover",
+      "launchYear": 2020,
+      "status": "active",
+      "summary": "Mendarat di Kawah Jezero pada 2021, mencari tanda-tanda kehidupan mikroba purba dan mengumpulkan sampel batuan untuk suatu saat dibawa ke Bumi."
+    },
+    {
+      "name": "Curiosity Rover",
+      "launchYear": 2011,
+      "status": "active",
+      "summary": "Mendarat di Kawah Gale pada 2012, mempelajari iklim dan geologi Mars untuk menilai apakah wilayah itu pernah layak huni."
+    },
+    {
+      "name": "Mars Reconnaissance Orbiter",
+      "launchYear": 2005,
+      "status": "active",
+      "summary": "Mengorbit Mars sejak 2006, memetakan permukaan dengan resolusi tinggi dan menjadi relai komunikasi untuk misi permukaan lain."
+    }
+  ],
+
+  "sources": [
+    {
+      "name": "NASA/JPL Solar System Exploration — Mars",
+      "url": "https://solarsystem.nasa.gov/planets/mars/overview/"
+    }
+  ],
+  "dataUpdatedAt": "2026-08-09"
+}

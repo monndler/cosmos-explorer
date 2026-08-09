@@ -1,0 +1,30 @@
+{
+  "id": "earth",
+  "slug": "earth",
+  "name": "Bumi",
+  "category": "planet",
+  "shortDescription": "Planet ketiga dari Matahari, satu-satunya yang diketahui memiliki kehidupan.",
+
+  "physical": {
+    "diameterKm": 12742,
+    "massKg": 5.972e24,
+    "gravityMs2": 9.8,
+    "meanTemperatureC": 15
+  },
+  "orbital": {
+    "distanceFromSunKm": 149600000,
+    "orbitalPeriodDays": 365.25
+  },
+  "rotation": {
+    "dayLengthHours": 24
+  },
+  "moons": 1,
+
+  "sources": [
+    {
+      "name": "NASA/JPL Solar System Exploration — Earth",
+      "url": "https://solarsystem.nasa.gov/planets/earth/overview/"
+    }
+  ],
+  "dataUpdatedAt": "2026-08-09"
+}

@@ -1,0 +1,51 @@
+{
+  "id": "pluto",
+  "slug": "pluto",
+  "name": "Pluto",
+  "category": "dwarf-planet",
+  "shortDescription": "Planet katai di sabuk Kuiper, sempat dianggap planet kesembilan sebelum direklasifikasi pada 2006.",
+
+  "physical": {
+    "diameterKm": 2377,
+    "massKg": 1.303e22,
+    "gravityMs2": 0.62,
+    "meanTemperatureC": -225
+  },
+  "orbital": {
+    "distanceFromSunKm": 5906400000,
+    "orbitalPeriodDays": 90560
+  },
+  "rotation": {
+    "dayLengthHours": 153.3
+  },
+  "moons": 5,
+
+  "overview": [
+    "Pluto ditemukan pada 1930 dan sempat dianggap sebagai planet kesembilan, sebelum direklasifikasi menjadi planet katai pada 2006 setelah Persatuan Astronomi Internasional (IAU) memperbarui definisi planet.",
+    "Pluto mengorbit Matahari dengan lintasan yang sangat lonjong dan miring dibanding kedelapan planet — kadang membuatnya lebih dekat ke Matahari daripada Neptunus.",
+    "Charon, bulan terbesar Pluto, berukuran hampir setengah dari Pluto sendiri — begitu besar sehingga keduanya kadang disebut sebagai 'sistem planet katai ganda'."
+  ],
+
+  "didYouKnow": [
+    "Satu tahun di Pluto setara dengan 248 tahun Bumi — sejak ditemukan pada 1930, Pluto belum genap menyelesaikan satu putaran penuh mengelilingi Matahari.",
+    "Wahana New Horizons milik NASA adalah satu-satunya yang pernah terbang dekat Pluto, melintas pada 2015 dan mengungkap permukaannya secara detail untuk pertama kali.",
+    "Pluto memiliki lima bulan yang diketahui: Charon, Styx, Nix, Kerberos, dan Hydra."
+  ],
+
+  "missions": [
+    {
+      "name": "New Horizons",
+      "launchYear": 2006,
+      "status": "completed",
+      "summary": "Terbang melintasi Pluto pada Juli 2015, memberikan gambar dan data close-up pertama dari permukaannya."
+    }
+  ],
+
+  "sources": [
+    {
+      "name": "NASA/JPL Solar System Exploration — Pluto",
+      "url": "https://solarsystem.nasa.gov/planets/dwarf-planets/pluto/overview/"
+    }
+  ],
+  "dataUpdatedAt": "2026-08-09"
+}

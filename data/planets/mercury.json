@@ -1,0 +1,57 @@
+{
+  "id": "mercury",
+  "slug": "mercury",
+  "name": "Merkurius",
+  "category": "planet",
+  "shortDescription": "Planet terkecil dan terdekat dengan Matahari, permukaannya dipenuhi kawah seperti Bulan.",
+
+  "physical": {
+    "diameterKm": 4879,
+    "massKg": 3.3011e23,
+    "gravityMs2": 3.7,
+    "meanTemperatureC": 167
+  },
+  "orbital": {
+    "distanceFromSunKm": 57900000,
+    "orbitalPeriodDays": 88
+  },
+  "rotation": {
+    "dayLengthHours": 4222.6
+  },
+  "moons": 0,
+
+  "overview": [
+    "Merkurius adalah planet terkecil dan terdekat dengan Matahari, mengorbit sangat cepat namun berotasi sangat lambat.",
+    "Permukaannya dipenuhi kawah tumbukan, mirip dengan Bulan, karena hampir tidak memiliki atmosfer yang bisa melindunginya dari hantaman benda luar angkasa.",
+    "Karena orbitnya yang dekat dengan Matahari namun nyaris tanpa atmosfer untuk menahan panas, suhu permukaannya berubah drastis antara siang dan malam."
+  ],
+
+  "didYouKnow": [
+    "Meski paling dekat dengan Matahari, Merkurius bukan planet terpanas di tata surya — gelar itu dipegang Venus karena efek rumah kaca atmosfernya.",
+    "Satu hari matahari penuh di Merkurius (dari terbit hingga terbit lagi) berlangsung sekitar 176 hari Bumi — lebih lama dari satu tahunnya sendiri.",
+    "Merkurius tidak memiliki satelit alami sama sekali."
+  ],
+
+  "missions": [
+    {
+      "name": "MESSENGER",
+      "launchYear": 2004,
+      "status": "completed",
+      "summary": "Mengorbit Merkurius dari 2011 hingga 2015, memetakan hampir seluruh permukaannya untuk pertama kali."
+    },
+    {
+      "name": "BepiColombo",
+      "launchYear": 2018,
+      "status": "active",
+      "summary": "Misi gabungan ESA-JAXA yang sedang dalam perjalanan menuju Merkurius untuk mempelajari struktur dan medan magnetnya."
+    }
+  ],
+
+  "sources": [
+    {
+      "name": "NASA/JPL Solar System Exploration — Mercury",
+      "url": "https://solarsystem.nasa.gov/planets/mercury/overview/"
+    }
+  ],
+  "dataUpdatedAt": "2026-08-09"
+}

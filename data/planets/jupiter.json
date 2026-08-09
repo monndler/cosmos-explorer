@@ -1,0 +1,57 @@
+{
+  "id": "jupiter",
+  "slug": "jupiter",
+  "name": "Jupiter",
+  "category": "planet",
+  "shortDescription": "Planet terbesar di tata surya, raksasa gas dengan Bintik Merah Besar yang ikonik.",
+
+  "physical": {
+    "diameterKm": 139820,
+    "massKg": 1.8982e27,
+    "gravityMs2": 24.79,
+    "meanTemperatureC": -110
+  },
+  "orbital": {
+    "distanceFromSunKm": 778500000,
+    "orbitalPeriodDays": 4333
+  },
+  "rotation": {
+    "dayLengthHours": 9.9
+  },
+  "moons": 95,
+
+  "overview": [
+    "Jupiter adalah planet terbesar di tata surya, sebuah raksasa gas yang massanya lebih besar dari gabungan seluruh planet lain.",
+    "Bintik Merah Besar-nya adalah badai raksasa yang sudah berlangsung ratusan tahun, cukup besar untuk menampung beberapa kali ukuran Bumi.",
+    "Jupiter memiliki sistem bulan yang sangat banyak; empat bulan terbesarnya (Io, Europa, Ganymede, Callisto) ditemukan Galileo Galilei pada 1610 dan disebut bulan Galilean."
+  ],
+
+  "didYouKnow": [
+    "Jupiter berotasi sangat cepat — satu harinya hanya sekitar 10 jam, tercepat di antara semua planet di tata surya.",
+    "Ganymede, salah satu bulan Jupiter, adalah satelit alami terbesar di tata surya — bahkan lebih besar dari planet Merkurius.",
+    "Jumlah bulan Jupiter yang terkonfirmasi terus bertambah setiap tahun seiring pengamatan baru, sehingga angka totalnya bisa berubah."
+  ],
+
+  "missions": [
+    {
+      "name": "Galileo",
+      "launchYear": 1989,
+      "status": "completed",
+      "summary": "Mengorbit Jupiter dari 1995 hingga 2003, mempelajari planet dan bulan-bulannya secara mendalam."
+    },
+    {
+      "name": "Juno",
+      "launchYear": 2011,
+      "status": "active",
+      "summary": "Mengorbit Jupiter sejak 2016, mempelajari struktur dalam, medan magnet, dan atmosfernya."
+    }
+  ],
+
+  "sources": [
+    {
+      "name": "NASA/JPL Solar System Exploration — Jupiter",
+      "url": "https://solarsystem.nasa.gov/planets/jupiter/overview/"
+    }
+  ],
+  "dataUpdatedAt": "2026-08-09"
+}

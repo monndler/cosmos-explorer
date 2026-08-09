@@ -1,0 +1,57 @@
+{
+  "id": "venus",
+  "slug": "venus",
+  "name": "Venus",
+  "category": "planet",
+  "shortDescription": "Planet terpanas di tata surya, terselimuti atmosfer tebal yang memerangkap panas secara ekstrem.",
+
+  "physical": {
+    "diameterKm": 12104,
+    "massKg": 4.8675e24,
+    "gravityMs2": 8.87,
+    "meanTemperatureC": 464
+  },
+  "orbital": {
+    "distanceFromSunKm": 108200000,
+    "orbitalPeriodDays": 225
+  },
+  "rotation": {
+    "dayLengthHours": 5832
+  },
+  "moons": 0,
+
+  "overview": [
+    "Venus adalah planet terpanas di tata surya, bukan Merkurius, karena atmosfernya yang tebal memerangkap panas lewat efek rumah kaca yang ekstrem.",
+    "Atmosfernya sebagian besar terdiri dari karbon dioksida dengan awan asam sulfat, menciptakan tekanan permukaan sekitar 90 kali tekanan atmosfer Bumi.",
+    "Venus berotasi berlawanan arah dibanding kebanyakan planet lain (rotasi retrograde), dan sangat lambat."
+  ],
+
+  "didYouKnow": [
+    "Satu hari di Venus (waktu rotasinya terhadap bintang) lebih panjang dari satu tahunnya mengelilingi Matahari.",
+    "Venus kadang disebut 'planet kembar' Bumi karena ukurannya yang mirip, meski kondisi permukaannya sangat berbeda.",
+    "Karena arah rotasinya terbalik, jika dilihat dari permukaan Venus, Matahari akan terbit di barat dan terbenam di timur."
+  ],
+
+  "missions": [
+    {
+      "name": "Magellan",
+      "launchYear": 1989,
+      "status": "completed",
+      "summary": "Memetakan hampir seluruh permukaan Venus menggunakan radar dari 1990 hingga 1994."
+    },
+    {
+      "name": "Venus Express",
+      "launchYear": 2005,
+      "status": "completed",
+      "summary": "Wahana ESA yang mempelajari atmosfer dan iklim Venus dari 2006 hingga 2014."
+    }
+  ],
+
+  "sources": [
+    {
+      "name": "NASA/JPL Solar System Exploration — Venus",
+      "url": "https://solarsystem.nasa.gov/planets/venus/overview/"
+    }
+  ],
+  "dataUpdatedAt": "2026-08-09"
+}
