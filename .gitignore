@@ -6,4 +6,4 @@ dist
 .env.local
 *.log
 .DS_Store
-.claude_astronomy_website_brief.md
+*.md
