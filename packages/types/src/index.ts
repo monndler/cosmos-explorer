@@ -129,5 +129,6 @@ export type Lesson = {
   title: string;
   category: "dasar-astronomi" | "tata-surya" | "deep-space" | "eksplorasi";
   summary: string;
+  content?: string[];
   quiz?: QuizQuestion[];
 };

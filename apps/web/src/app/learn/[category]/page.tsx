@@ -42,22 +42,40 @@ export default function LearnCategoryPage({ params }: { params: CategoryPagePara
       <p className="mt-3 max-w-xl text-ink-muted">{category.description}</p>
 
       <div className="mt-10 space-y-3">
-        {lessons.map((lesson) => (
-          <Card key={lesson.id} className="flex items-start justify-between gap-4 border-dashed">
-            <div>
-              <h2 className="font-display text-base text-ink">{lesson.title}</h2>
-              <p className="mt-1.5 text-sm text-ink-muted">{lesson.summary}</p>
-            </div>
-            <span className="shrink-0 rounded-sm bg-void-raised px-2.5 py-1 font-data text-[11px] uppercase tracking-widest text-ink-faint">
-              Segera
-            </span>
-          </Card>
-        ))}
-      </div>
+        {lessons.map((lesson) => {
+          const hasFullContent = Boolean(lesson.content && lesson.content.length > 0);
 
-      <p className="mt-8 font-data text-xs text-ink-faint">
-        Konten pelajaran penuh beserta kuis interaktif sedang dikembangkan.
-      </p>
+          if (!hasFullContent) {
+            return (
+              <Card key={lesson.id} className="flex items-start justify-between gap-4 border-dashed">
+                <div>
+                  <h2 className="font-display text-base text-ink">{lesson.title}</h2>
+                  <p className="mt-1.5 text-sm text-ink-muted">{lesson.summary}</p>
+                </div>
+                <span className="shrink-0 rounded-sm bg-void-raised px-2.5 py-1 font-data text-[11px] uppercase tracking-widest text-ink-faint">
+                  Segera
+                </span>
+              </Card>
+            );
+          }
+
+          return (
+            <Link key={lesson.id} href={`/learn/${category.slug}/${lesson.slug}`} className="block">
+              <Card className="flex items-start justify-between gap-4 transition-colors duration-200 hover:border-aurora">
+                <div>
+                  <h2 className="font-display text-base text-ink">{lesson.title}</h2>
+                  <p className="mt-1.5 text-sm text-ink-muted">{lesson.summary}</p>
+                </div>
+                {lesson.quiz && lesson.quiz.length > 0 ? (
+                  <span className="shrink-0 rounded-sm bg-void-raised px-2.5 py-1 font-data text-[11px] uppercase tracking-widest text-aurora">
+                    + Kuis
+                  </span>
+                ) : null}
+              </Card>
+            </Link>
+          );
+        })}
+      </div>
     </div>
   );
 }

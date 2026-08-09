@@ -4,86 +4,443 @@
     "slug": "apa-itu-astronomi",
     "title": "Apa itu Astronomi?",
     "category": "dasar-astronomi",
-    "summary": "Pengantar tentang apa yang dipelajari astronomi dan bagaimana ilmuwan mengamati langit."
+    "summary": "Pengantar tentang apa yang dipelajari astronomi dan bagaimana ilmuwan mengamati langit.",
+    "content": [
+      "Astronomi adalah cabang ilmu pengetahuan yang mempelajari benda-benda langit — mulai dari planet, bintang, galaksi, hingga fenomena seperti lubang hitam dan radiasi kosmik.",
+      "Berbeda dengan astrologi yang bersifat mistis dan tidak berdasar sains, astronomi adalah ilmu empiris: kesimpulannya dibangun dari pengamatan, pengukuran, dan eksperimen yang bisa diuji ulang.",
+      "Astronomi adalah salah satu ilmu tertua yang dipelajari manusia — peradaban kuno seperti Babilonia, Mesir, Yunani, Maya, dan Tiongkok sudah mencatat pergerakan benda langit ribuan tahun lalu, awalnya untuk menentukan kalender dan musim tanam.",
+      "Astronomi modern terbagi ke berbagai cabang, seperti astrofisika (mempelajari sifat fisik benda langit), kosmologi (mempelajari asal-usul dan evolusi alam semesta), dan astrobiologi (mencari kemungkinan kehidupan di luar Bumi)."
+    ],
+    "quiz": [
+      {
+        "id": "apa-itu-astronomi-q1",
+        "prompt": "Apa perbedaan utama astronomi dengan astrologi?",
+        "choices": [
+          { "id": "a", "label": "Astronomi ilmiah berdasarkan pengamatan, astrologi tidak berdasar sains", "isCorrect": true },
+          { "id": "b", "label": "Astronomi mempelajari Bulan, astrologi mempelajari Matahari", "isCorrect": false },
+          { "id": "c", "label": "Keduanya sama saja, hanya beda nama", "isCorrect": false },
+          { "id": "d", "label": "Astrologi lebih modern dari astronomi", "isCorrect": false }
+        ],
+        "explanation": "Astronomi adalah ilmu empiris yang kesimpulannya diuji lewat pengamatan dan pengukuran, sedangkan astrologi adalah kepercayaan yang tidak memiliki dasar ilmiah."
+      },
+      {
+        "id": "apa-itu-astronomi-q2",
+        "prompt": "Peradaban kuno mempelajari pergerakan benda langit terutama untuk apa?",
+        "choices": [
+          { "id": "a", "label": "Menentukan kalender dan musim tanam", "isCorrect": true },
+          { "id": "b", "label": "Membuat roket", "isCorrect": false },
+          { "id": "c", "label": "Mencari planet baru", "isCorrect": false },
+          { "id": "d", "label": "Menghitung kecepatan cahaya", "isCorrect": false }
+        ],
+        "explanation": "Sebelum ada teknologi modern, pengamatan langit dipakai peradaban kuno terutama untuk menentukan waktu, musim, dan kalender pertanian."
+      }
+    ]
   },
   {
     "id": "skala-alam-semesta",
     "slug": "skala-alam-semesta",
     "title": "Skala Alam Semesta",
     "category": "dasar-astronomi",
-    "summary": "Membangun intuisi seberapa besar jarak dan ukuran di alam semesta, dari Bumi hingga galaksi."
+    "summary": "Membangun intuisi seberapa besar jarak dan ukuran di alam semesta, dari Bumi hingga galaksi.",
+    "content": [
+      "Salah satu tantangan terbesar dalam belajar astronomi adalah membayangkan skalanya — jarak dan ukuran di alam semesta jauh melampaui pengalaman sehari-hari kita di Bumi.",
+      "Untuk konteks: cahaya Matahari saja butuh sekitar 8 menit untuk sampai ke Bumi. Sementara itu, cahaya dari bintang terdekat setelah Matahari, Proxima Centauri, butuh lebih dari 4 tahun untuk sampai ke kita.",
+      "Karena jarak antar bintang sangat jauh, astronom sering memakai satuan 'tahun cahaya' — jarak yang ditempuh cahaya dalam satu tahun — daripada kilometer, supaya angkanya tidak terlalu besar untuk ditulis.",
+      "Galaksi Bimasakti, rumah tata surya kita, diperkirakan memiliki diameter sekitar 100.000 tahun cahaya dan berisi ratusan miliar bintang. Dan Bimasakti sendiri hanyalah satu dari miliaran galaksi yang bisa diamati di alam semesta."
+    ],
+    "quiz": [
+      {
+        "id": "skala-alam-semesta-q1",
+        "prompt": "Mengapa astronom sering memakai satuan 'tahun cahaya' dibanding kilometer?",
+        "choices": [
+          { "id": "a", "label": "Karena jarak antar bintang sangat jauh, sehingga angka dalam kilometer jadi tidak praktis", "isCorrect": true },
+          { "id": "b", "label": "Karena kilometer tidak berlaku di luar angkasa", "isCorrect": false },
+          { "id": "c", "label": "Karena tahun cahaya adalah satuan waktu", "isCorrect": false },
+          { "id": "d", "label": "Karena NASA mewajibkannya", "isCorrect": false }
+        ],
+        "explanation": "Tahun cahaya (jarak yang ditempuh cahaya dalam satu tahun) dipakai supaya angka jarak antar bintang/galaksi tidak perlu ditulis dengan puluhan digit kilometer."
+      },
+      {
+        "id": "skala-alam-semesta-q2",
+        "prompt": "Berapa lama cahaya Matahari butuh untuk sampai ke Bumi?",
+        "choices": [
+          { "id": "a", "label": "Sekitar 8 menit", "isCorrect": true },
+          { "id": "b", "label": "Sekitar 8 detik", "isCorrect": false },
+          { "id": "c", "label": "Sekitar 8 jam", "isCorrect": false },
+          { "id": "d", "label": "Instan, tanpa jeda waktu", "isCorrect": false }
+        ],
+        "explanation": "Jarak rata-rata Bumi-Matahari sekitar 150 juta km, dan cahaya menempuhnya dalam sekitar 8 menit 19 detik."
+      }
+    ]
   },
   {
     "id": "alat-bantu-teleskop",
     "slug": "alat-bantu-teleskop",
     "title": "Alat Bantu: Teleskop",
     "category": "dasar-astronomi",
-    "summary": "Bagaimana teleskop bekerja dan mengapa alat ini mengubah cara manusia memahami langit."
+    "summary": "Bagaimana teleskop bekerja dan mengapa alat ini mengubah cara manusia memahami langit.",
+    "content": [
+      "Teleskop adalah alat yang mengumpulkan dan memfokuskan cahaya (atau jenis radiasi elektromagnetik lain) dari benda langit, sehingga objek yang jauh dan redup bisa diamati lebih jelas.",
+      "Ada dua jenis dasar teleskop optik: teleskop refraktor yang menggunakan lensa untuk membelokkan cahaya, dan teleskop reflektor yang menggunakan cermin untuk memantulkan cahaya. Kebanyakan teleskop astronomi profesional modern adalah reflektor karena cermin besar lebih mudah dibuat dibanding lensa besar.",
+      "Semakin besar diameter lensa atau cermin utama teleskop (disebut aperture), semakin banyak cahaya yang bisa dikumpulkan, sehingga objek redup dan jauh bisa terlihat lebih detail.",
+      "Teleskop tidak hanya menangkap cahaya tampak. Teleskop radio, inframerah, sinar-X, dan sinar gamma memungkinkan astronom mempelajari fenomena yang tidak terlihat oleh mata manusia sama sekali, seperti radiasi sisa Big Bang atau lubang hitam yang sedang menyerap materi."
+    ],
+    "quiz": [
+      {
+        "id": "alat-bantu-teleskop-q1",
+        "prompt": "Apa fungsi utama aperture (diameter lensa/cermin) pada teleskop?",
+        "choices": [
+          { "id": "a", "label": "Menentukan seberapa banyak cahaya yang bisa dikumpulkan", "isCorrect": true },
+          { "id": "b", "label": "Menentukan warna yang terlihat", "isCorrect": false },
+          { "id": "c", "label": "Menentukan kecepatan teleskop bergerak", "isCorrect": false },
+          { "id": "d", "label": "Tidak berpengaruh pada hasil pengamatan", "isCorrect": false }
+        ],
+        "explanation": "Aperture yang lebih besar mengumpulkan lebih banyak cahaya, memungkinkan pengamatan objek yang lebih redup dan detail yang lebih halus."
+      },
+      {
+        "id": "alat-bantu-teleskop-q2",
+        "prompt": "Kenapa astronom juga memakai teleskop radio atau sinar-X, bukan cuma teleskop cahaya tampak?",
+        "choices": [
+          { "id": "a", "label": "Supaya bisa mempelajari fenomena yang tidak terlihat mata manusia, seperti radiasi sisa Big Bang", "isCorrect": true },
+          { "id": "b", "label": "Karena teleskop cahaya tampak sudah tidak diproduksi lagi", "isCorrect": false },
+          { "id": "c", "label": "Karena lebih murah", "isCorrect": false },
+          { "id": "d", "label": "Karena hukum mewajibkannya", "isCorrect": false }
+        ],
+        "explanation": "Banyak fenomena kosmik memancarkan radiasi di luar spektrum cahaya tampak, sehingga teleskop jenis lain dibutuhkan untuk mendeteksinya."
+      }
+    ]
   },
-
   {
     "id": "delapan-planet",
     "slug": "delapan-planet",
     "title": "Delapan Planet",
     "category": "tata-surya",
-    "summary": "Mengenal delapan planet yang mengorbit Matahari, dari yang terdekat hingga terjauh."
+    "summary": "Mengenal delapan planet yang mengorbit Matahari, dari yang terdekat hingga terjauh.",
+    "content": [
+      "Tata surya kita terdiri dari delapan planet yang mengorbit Matahari, terbagi menjadi dua kelompok utama: planet dalam yang berbatu (Merkurius, Venus, Bumi, Mars) dan planet luar yang berupa raksasa gas/es (Jupiter, Saturnus, Uranus, Neptunus).",
+      "Empat planet dalam berukuran relatif kecil dan padat, dengan permukaan berbatu. Empat planet luar jauh lebih besar tapi tidak memiliki permukaan padat yang jelas — sebagian besar tersusun dari gas dan es.",
+      "Urutan planet dari yang terdekat ke Matahari: Merkurius, Venus, Bumi, Mars, Jupiter, Saturnus, Uranus, Neptunus. Pluto, yang dulu dianggap planet kesembilan, direklasifikasi menjadi planet katai pada 2006.",
+      "Setiap planet punya karakteristik ekstrem masing-masing: Merkurius nyaris tanpa atmosfer, Venus adalah rumah kaca terpanas, Mars punya gunung tertinggi, Jupiter adalah raksasa gas terbesar, Saturnus punya cincin paling mencolok, Uranus berputar menyamping, dan Neptunus punya angin terkencang."
+    ],
+    "quiz": [
+      {
+        "id": "delapan-planet-q1",
+        "prompt": "Manakah kelompok planet dalam (berbatu) di tata surya kita?",
+        "choices": [
+          { "id": "a", "label": "Merkurius, Venus, Bumi, Mars", "isCorrect": true },
+          { "id": "b", "label": "Jupiter, Saturnus, Uranus, Neptunus", "isCorrect": false },
+          { "id": "c", "label": "Bumi, Mars, Jupiter, Saturnus", "isCorrect": false },
+          { "id": "d", "label": "Venus, Bumi, Jupiter, Pluto", "isCorrect": false }
+        ],
+        "explanation": "Empat planet terdekat dengan Matahari — Merkurius, Venus, Bumi, dan Mars — memiliki permukaan berbatu yang padat, berbeda dari empat planet luar yang berupa raksasa gas/es."
+      },
+      {
+        "id": "delapan-planet-q2",
+        "prompt": "Kenapa Pluto tidak lagi dianggap sebagai planet kesembilan?",
+        "choices": [
+          { "id": "a", "label": "Direklasifikasi menjadi planet katai pada 2006 setelah IAU memperbarui definisi planet", "isCorrect": true },
+          { "id": "b", "label": "Karena Pluto hancur", "isCorrect": false },
+          { "id": "c", "label": "Karena Pluto pindah keluar tata surya", "isCorrect": false },
+          { "id": "d", "label": "Karena Pluto ditemukan tidak nyata", "isCorrect": false }
+        ],
+        "explanation": "Persatuan Astronomi Internasional (IAU) memperbarui definisi 'planet' pada 2006, dan Pluto tidak memenuhi salah satu kriterianya, sehingga direklasifikasi sebagai planet katai."
+      }
+    ]
   },
   {
     "id": "matahari-sebagai-bintang",
     "slug": "matahari-sebagai-bintang",
     "title": "Matahari sebagai Bintang",
     "category": "tata-surya",
-    "summary": "Mengapa Matahari diklasifikasikan sebagai bintang, dan perannya bagi tata surya."
+    "summary": "Mengapa Matahari diklasifikasikan sebagai bintang, dan perannya bagi tata surya.",
+    "content": [
+      "Matahari adalah bintang — bola plasma raksasa yang menghasilkan energinya sendiri lewat reaksi fusi nuklir di intinya, mengubah hidrogen menjadi helium sambil melepaskan energi dalam jumlah sangat besar.",
+      "Dibandingkan bintang-bintang lain di galaksi, Matahari sebenarnya tergolong bintang berukuran sedang — banyak bintang lain yang jauh lebih besar, dan banyak juga yang lebih kecil.",
+      "Matahari menyumbang lebih dari 99% massa total tata surya, sehingga gravitasinya-lah yang mengikat seluruh planet, bulan, asteroid, dan komet tetap mengorbit di sekitarnya.",
+      "Energi dari Matahari — dalam bentuk cahaya dan panas — adalah sumber utama yang memungkinkan kehidupan di Bumi, termasuk mendukung proses fotosintesis pada tumbuhan yang menjadi dasar rantai makanan."
+    ],
+    "quiz": [
+      {
+        "id": "matahari-sebagai-bintang-q1",
+        "prompt": "Bagaimana Matahari menghasilkan energinya?",
+        "choices": [
+          { "id": "a", "label": "Reaksi fusi nuklir yang mengubah hidrogen menjadi helium", "isCorrect": true },
+          { "id": "b", "label": "Membakar bahan bakar fosil", "isCorrect": false },
+          { "id": "c", "label": "Reaksi kimia sederhana", "isCorrect": false },
+          { "id": "d", "label": "Menyerap energi dari planet lain", "isCorrect": false }
+        ],
+        "explanation": "Di inti Matahari, tekanan dan suhu yang sangat tinggi memungkinkan reaksi fusi nuklir yang mengubah hidrogen menjadi helium, melepaskan energi besar."
+      },
+      {
+        "id": "matahari-sebagai-bintang-q2",
+        "prompt": "Berapa persen kira-kira massa total tata surya yang disumbang Matahari?",
+        "choices": [
+          { "id": "a", "label": "Lebih dari 99%", "isCorrect": true },
+          { "id": "b", "label": "Sekitar 50%", "isCorrect": false },
+          { "id": "c", "label": "Sekitar 10%", "isCorrect": false },
+          { "id": "d", "label": "Kurang dari 1%", "isCorrect": false }
+        ],
+        "explanation": "Matahari sangat dominan secara massa dibanding seluruh planet, bulan, dan objek lain di tata surya digabungkan."
+      }
+    ]
   },
   {
     "id": "bulan-dan-satelit-alami",
     "slug": "bulan-dan-satelit-alami",
     "title": "Bulan dan Satelit Alami",
     "category": "tata-surya",
-    "summary": "Perbedaan antara satelit alami dan buatan, serta peran Bulan bagi Bumi."
+    "summary": "Perbedaan antara satelit alami dan buatan, serta peran Bulan bagi Bumi.",
+    "content": [
+      "Satelit alami adalah benda langit yang mengorbit planet (atau planet katai) akibat gravitasi, berbeda dengan satelit buatan yang dibuat dan diluncurkan manusia.",
+      "Bulan adalah satu-satunya satelit alami Bumi. Sejauh ini, Bulan juga menjadi satu-satunya benda langit di luar Bumi yang pernah didatangi manusia secara langsung.",
+      "Tidak semua planet memiliki satelit alami — Merkurius dan Venus sama sekali tidak punya bulan. Sebaliknya, planet-planet raksasa seperti Jupiter dan Saturnus memiliki puluhan hingga ratusan satelit yang diketahui.",
+      "Beberapa satelit alami di tata surya sangat menarik untuk diteliti karena berpotensi punya kondisi yang mendukung kehidupan, seperti Europa (bulan Jupiter) dan Enceladus (bulan Saturnus), yang diduga memiliki lautan air cair di bawah permukaan esnya."
+    ],
+    "quiz": [
+      {
+        "id": "bulan-dan-satelit-alami-q1",
+        "prompt": "Apa perbedaan satelit alami dengan satelit buatan?",
+        "choices": [
+          { "id": "a", "label": "Satelit alami terbentuk secara alami dan mengorbit karena gravitasi, satelit buatan dibuat dan diluncurkan manusia", "isCorrect": true },
+          { "id": "b", "label": "Satelit alami selalu lebih besar dari planetnya", "isCorrect": false },
+          { "id": "c", "label": "Satelit buatan hanya ada di Bumi", "isCorrect": false },
+          { "id": "d", "label": "Tidak ada bedanya", "isCorrect": false }
+        ],
+        "explanation": "Satelit alami seperti Bulan terbentuk secara alami, sedangkan satelit buatan adalah teknologi ciptaan manusia yang diluncurkan ke orbit."
+      },
+      {
+        "id": "bulan-dan-satelit-alami-q2",
+        "prompt": "Bulan Jupiter dan Saturnus mana yang diduga punya lautan air cair di bawah permukaan esnya?",
+        "choices": [
+          { "id": "a", "label": "Europa dan Enceladus", "isCorrect": true },
+          { "id": "b", "label": "Titan dan Ganymede", "isCorrect": false },
+          { "id": "c", "label": "Phobos dan Deimos", "isCorrect": false },
+          { "id": "d", "label": "Charon dan Triton", "isCorrect": false }
+        ],
+        "explanation": "Europa (bulan Jupiter) dan Enceladus (bulan Saturnus) menunjukkan bukti kuat adanya lautan air cair di bawah kerak esnya, menjadikan keduanya target menarik pencarian kehidupan luar Bumi."
+      }
+    ]
   },
-
   {
     "id": "bintang-dan-siklus-hidupnya",
     "slug": "bintang-dan-siklus-hidupnya",
     "title": "Bintang dan Siklus Hidupnya",
     "category": "deep-space",
-    "summary": "Bagaimana bintang lahir, bersinar selama miliaran tahun, lalu berakhir."
+    "summary": "Bagaimana bintang lahir, bersinar selama miliaran tahun, lalu berakhir.",
+    "content": [
+      "Bintang lahir dari awan gas dan debu raksasa yang disebut nebula. Ketika gravitasi menarik gas ini cukup rapat dan panas, reaksi fusi nuklir mulai menyala di intinya — momen itulah sebuah bintang 'lahir'.",
+      "Sebagian besar hidup sebuah bintang dihabiskan dalam fase stabil yang disebut 'deret utama' (main sequence), saat bintang terus-menerus mengubah hidrogen menjadi helium di intinya. Matahari kita sedang berada di fase ini.",
+      "Bagaimana sebuah bintang berakhir bergantung pada massanya. Bintang bermassa seperti Matahari akan mengembang menjadi raksasa merah lalu melepaskan lapisan luarnya, meninggalkan inti padat yang disebut katai putih.",
+      "Bintang yang jauh lebih masif dari Matahari berakhir secara lebih dramatis — meledak sebagai supernova, dan bisa meninggalkan sisa berupa bintang neutron atau bahkan lubang hitam, tergantung seberapa masif bintang itu sebelumnya."
+    ],
+    "quiz": [
+      {
+        "id": "bintang-dan-siklus-hidupnya-q1",
+        "prompt": "Bintang seperti Matahari kita sedang berada di fase hidup yang mana?",
+        "choices": [
+          { "id": "a", "label": "Deret utama (main sequence), mengubah hidrogen jadi helium", "isCorrect": true },
+          { "id": "b", "label": "Katai putih", "isCorrect": false },
+          { "id": "c", "label": "Supernova", "isCorrect": false },
+          { "id": "d", "label": "Lubang hitam", "isCorrect": false }
+        ],
+        "explanation": "Matahari sedang stabil membakar hidrogen menjadi helium di intinya — fase yang disebut deret utama, yang akan berlangsung miliaran tahun lagi."
+      },
+      {
+        "id": "bintang-dan-siklus-hidupnya-q2",
+        "prompt": "Apa yang membedakan akhir hidup bintang bermassa seperti Matahari dengan bintang yang jauh lebih masif?",
+        "choices": [
+          { "id": "a", "label": "Bintang masif berakhir sebagai supernova dan bisa meninggalkan bintang neutron/lubang hitam, sementara bintang seperti Matahari menjadi katai putih", "isCorrect": true },
+          { "id": "b", "label": "Keduanya selalu berakhir sama", "isCorrect": false },
+          { "id": "c", "label": "Bintang masif tidak pernah mati", "isCorrect": false },
+          { "id": "d", "label": "Bintang seperti Matahari langsung meledak", "isCorrect": false }
+        ],
+        "explanation": "Massa awal bintang sangat menentukan akhir hidupnya — semakin masif, semakin dramatis dan eksplosif akhirnya."
+      }
+    ]
   },
   {
     "id": "galaksi-bimasakti",
     "slug": "galaksi-bimasakti",
     "title": "Galaksi Bimasakti",
     "category": "deep-space",
-    "summary": "Rumah tata surya kita di alam semesta yang luas — struktur dan skala galaksi Bimasakti."
+    "summary": "Rumah tata surya kita di alam semesta yang luas — struktur dan skala galaksi Bimasakti.",
+    "content": [
+      "Bimasakti (Milky Way) adalah galaksi tempat tata surya kita berada, berbentuk spiral dengan lengan-lengan yang melengkung keluar dari pusatnya.",
+      "Diperkirakan Bimasakti berisi ratusan miliar bintang, dengan tata surya kita terletak di salah satu lengan spiralnya (disebut Lengan Orion), jauh dari pusat galaksi.",
+      "Di pusat Bimasakti diyakini terdapat lubang hitam supermasif bernama Sagittarius A*, dengan massa jutaan kali massa Matahari.",
+      "Dari Bumi, kita bisa melihat sebagian Bimasakti sebagai pita cahaya samar di langit malam yang gelap — itu adalah cahaya gabungan dari miliaran bintang yang terlalu jauh untuk dilihat satu per satu dengan mata telanjang."
+    ],
+    "quiz": [
+      {
+        "id": "galaksi-bimasakti-q1",
+        "prompt": "Di lengan spiral mana tata surya kita berada di Bimasakti?",
+        "choices": [
+          { "id": "a", "label": "Lengan Orion", "isCorrect": true },
+          { "id": "b", "label": "Lengan Sagittarius", "isCorrect": false },
+          { "id": "c", "label": "Lengan Perseus", "isCorrect": false },
+          { "id": "d", "label": "Di pusat galaksi", "isCorrect": false }
+        ],
+        "explanation": "Tata surya kita terletak di Lengan Orion, salah satu lengan spiral Bimasakti, cukup jauh dari pusat galaksi."
+      },
+      {
+        "id": "galaksi-bimasakti-q2",
+        "prompt": "Apa nama objek yang diyakini berada di pusat Bimasakti?",
+        "choices": [
+          { "id": "a", "label": "Sagittarius A*, lubang hitam supermasif", "isCorrect": true },
+          { "id": "b", "label": "Proxima Centauri", "isCorrect": false },
+          { "id": "c", "label": "Matahari", "isCorrect": false },
+          { "id": "d", "label": "Andromeda", "isCorrect": false }
+        ],
+        "explanation": "Sagittarius A* adalah lubang hitam supermasif yang diyakini berada di pusat galaksi Bimasakti, dengan massa jutaan kali Matahari."
+      }
+    ]
   },
   {
     "id": "black-hole",
     "slug": "black-hole",
     "title": "Black Hole",
     "category": "deep-space",
-    "summary": "Apa sebenarnya lubang hitam, dan mengapa gravitasinya begitu ekstrem."
+    "summary": "Apa sebenarnya lubang hitam, dan mengapa gravitasinya begitu ekstrem.",
+    "content": [
+      "Lubang hitam (black hole) adalah wilayah di ruang-waktu dengan gravitasi yang begitu kuat sehingga tidak ada apa pun, termasuk cahaya, yang bisa lolos begitu melewati batas tertentu yang disebut 'horizon peristiwa' (event horizon).",
+      "Lubang hitam bukan 'lubang' dalam artian ruang kosong — justru sebaliknya, lubang hitam terbentuk dari materi yang sangat padat terkompresi ke ruang yang sangat kecil.",
+      "Salah satu cara lubang hitam terbentuk adalah dari keruntuhan inti bintang masif yang telah kehabisan bahan bakar nuklirnya, lalu meledak sebagai supernova.",
+      "Karena tidak memancarkan cahaya, lubang hitam tidak bisa dilihat langsung. Astronom mendeteksinya lewat efek gravitasinya terhadap objek di sekitarnya, atau lewat gambar 'bayangan' lubang hitam yang pertama kali berhasil difoto oleh Event Horizon Telescope pada 2019."
+    ],
+    "quiz": [
+      {
+        "id": "black-hole-q1",
+        "prompt": "Kenapa tidak ada cahaya yang bisa lolos dari lubang hitam?",
+        "choices": [
+          { "id": "a", "label": "Karena gravitasinya sangat kuat setelah melewati horizon peristiwa", "isCorrect": true },
+          { "id": "b", "label": "Karena lubang hitam menyerap semua warna", "isCorrect": false },
+          { "id": "c", "label": "Karena lubang hitam adalah ruang kosong total", "isCorrect": false },
+          { "id": "d", "label": "Karena cahaya tidak bisa bergerak di luar angkasa", "isCorrect": false }
+        ],
+        "explanation": "Setelah melewati horizon peristiwa, gravitasi lubang hitam begitu kuat sehingga kecepatan lepas yang dibutuhkan melebihi kecepatan cahaya — sehingga bahkan cahaya pun tidak bisa keluar."
+      },
+      {
+        "id": "black-hole-q2",
+        "prompt": "Bagaimana astronom pertama kali berhasil memotret 'bayangan' lubang hitam?",
+        "choices": [
+          { "id": "a", "label": "Lewat Event Horizon Telescope pada 2019", "isCorrect": true },
+          { "id": "b", "label": "Lewat teleskop Hubble pada 1990", "isCorrect": false },
+          { "id": "c", "label": "Lewat misi Apollo", "isCorrect": false },
+          { "id": "d", "label": "Belum pernah berhasil sampai sekarang", "isCorrect": false }
+        ],
+        "explanation": "Pada 2019, kolaborasi internasional Event Horizon Telescope berhasil merilis gambar pertama bayangan lubang hitam, di galaksi M87."
+      }
+    ]
   },
-
   {
     "id": "sejarah-peluncuran-roket",
     "slug": "sejarah-peluncuran-roket",
     "title": "Sejarah Peluncuran Roket",
     "category": "eksplorasi",
-    "summary": "Perjalanan singkat dari roket pertama hingga wahana yang menjangkau luar tata surya."
+    "summary": "Perjalanan singkat dari roket pertama hingga wahana yang menjangkau luar tata surya.",
+    "content": [
+      "Era eksplorasi luar angkasa modern dimulai pada 4 Oktober 1957, ketika Uni Soviet meluncurkan Sputnik 1, satelit buatan pertama yang mengorbit Bumi.",
+      "Peluncuran Sputnik memicu 'Space Race' — persaingan luar angkasa antara Amerika Serikat dan Uni Soviet selama Perang Dingin, yang mendorong kemajuan teknologi roket secara sangat cepat dalam waktu singkat.",
+      "NASA sendiri didirikan pada 1958 sebagai respons Amerika Serikat terhadap kemajuan luar angkasa Soviet, dan menjadi badan antariksa sipil utama negara tersebut hingga sekarang.",
+      "Sejak era Sputnik, teknologi roket terus berkembang — dari roket sekali pakai yang mahal, hingga roket yang bisa dipakai ulang (reusable) yang mulai dikembangkan secara komersial dalam beberapa dekade terakhir, menurunkan biaya peluncuran secara signifikan."
+    ],
+    "quiz": [
+      {
+        "id": "sejarah-peluncuran-roket-q1",
+        "prompt": "Apa nama satelit buatan pertama yang berhasil mengorbit Bumi?",
+        "choices": [
+          { "id": "a", "label": "Sputnik 1", "isCorrect": true },
+          { "id": "b", "label": "Apollo 11", "isCorrect": false },
+          { "id": "c", "label": "Voyager 1", "isCorrect": false },
+          { "id": "d", "label": "Hubble", "isCorrect": false }
+        ],
+        "explanation": "Sputnik 1 diluncurkan Uni Soviet pada 4 Oktober 1957, menandai dimulainya era eksplorasi luar angkasa modern."
+      },
+      {
+        "id": "sejarah-peluncuran-roket-q2",
+        "prompt": "Kenapa NASA didirikan pada 1958?",
+        "choices": [
+          { "id": "a", "label": "Sebagai respons Amerika Serikat terhadap kemajuan luar angkasa Uni Soviet", "isCorrect": true },
+          { "id": "b", "label": "Untuk menggantikan angkatan udara", "isCorrect": false },
+          { "id": "c", "label": "Untuk mengelola penerbangan komersial", "isCorrect": false },
+          { "id": "d", "label": "Atas permintaan PBB", "isCorrect": false }
+        ],
+        "explanation": "Peluncuran Sputnik oleh Uni Soviet mendorong Amerika Serikat mendirikan NASA pada 1958 sebagai badan antariksa sipil untuk bersaing dalam eksplorasi luar angkasa."
+      }
+    ]
   },
   {
     "id": "pendaratan-di-bulan",
     "slug": "pendaratan-di-bulan",
     "title": "Pendaratan di Bulan",
     "category": "eksplorasi",
-    "summary": "Bagaimana misi Apollo membawa manusia pertama kali menginjakkan kaki di Bulan."
+    "summary": "Bagaimana misi Apollo membawa manusia pertama kali menginjakkan kaki di Bulan.",
+    "content": [
+      "Pada 20 Juli 1969, misi Apollo 11 milik NASA berhasil mendaratkan manusia pertama kali di permukaan Bulan — sebuah pencapaian besar dalam sejarah eksplorasi manusia.",
+      "Neil Armstrong menjadi manusia pertama yang menginjakkan kaki di Bulan, diikuti oleh Buzz Aldrin, sementara Michael Collins tetap mengorbit Bulan di modul komando.",
+      "Program Apollo berlanjut hingga Apollo 17 pada 1972, dengan total enam misi berhasil mendaratkan astronot di permukaan Bulan dan membawa pulang sampel batuan bulan untuk diteliti.",
+      "Setelah Apollo 17, tidak ada misi berawak yang kembali ke permukaan Bulan selama lebih dari lima dekade — hingga program Artemis NASA di era modern kembali menargetkan pendaratan manusia di Bulan."
+    ],
+    "quiz": [
+      {
+        "id": "pendaratan-di-bulan-q1",
+        "prompt": "Siapa manusia pertama yang menginjakkan kaki di Bulan?",
+        "choices": [
+          { "id": "a", "label": "Neil Armstrong", "isCorrect": true },
+          { "id": "b", "label": "Buzz Aldrin", "isCorrect": false },
+          { "id": "c", "label": "Michael Collins", "isCorrect": false },
+          { "id": "d", "label": "Yuri Gagarin", "isCorrect": false }
+        ],
+        "explanation": "Neil Armstrong menjadi orang pertama yang berjalan di permukaan Bulan pada misi Apollo 11, 20 Juli 1969, diikuti Buzz Aldrin beberapa saat kemudian."
+      },
+      {
+        "id": "pendaratan-di-bulan-q2",
+        "prompt": "Berapa total misi Apollo yang berhasil mendaratkan astronot di Bulan?",
+        "choices": [
+          { "id": "a", "label": "Enam misi", "isCorrect": true },
+          { "id": "b", "label": "Satu misi", "isCorrect": false },
+          { "id": "c", "label": "Dua belas misi", "isCorrect": false },
+          { "id": "d", "label": "Tiga misi", "isCorrect": false }
+        ],
+        "explanation": "Dari Apollo 11 hingga Apollo 17 (Apollo 13 gagal mendarat karena insiden teknis), total enam misi berhasil mendaratkan astronot di permukaan Bulan."
+      }
+    ]
   },
   {
     "id": "rover-di-mars",
     "slug": "rover-di-mars",
     "title": "Rover di Mars",
     "category": "eksplorasi",
-    "summary": "Bagaimana rover seperti Curiosity dan Perseverance menjelajahi permukaan Mars dari jarak jutaan kilometer."
+    "summary": "Bagaimana rover seperti Curiosity dan Perseverance menjelajahi permukaan Mars dari jarak jutaan kilometer.",
+    "content": [
+      "Rover adalah kendaraan penjelajah tanpa awak yang dikendalikan dari Bumi untuk menjelajahi permukaan planet lain, termasuk Mars.",
+      "NASA telah mengirim beberapa rover ke Mars, dimulai dari Sojourner (1997), disusul Spirit dan Opportunity (2004), Curiosity (2012), dan Perseverance (2021).",
+      "Curiosity dan Perseverance dirancang untuk mempelajari geologi Mars dan mencari tanda-tanda bahwa planet ini pernah (atau mungkin masih) bisa mendukung kehidupan mikroba.",
+      "Perseverance membawa misi tambahan yang unik: mengumpulkan sampel batuan Mars yang suatu saat direncanakan dibawa pulang ke Bumi, serta membawa helikopter kecil bernama Ingenuity yang menjadi wahana pertama yang berhasil terbang di atmosfer planet lain."
+    ],
+    "quiz": [
+      {
+        "id": "rover-di-mars-q1",
+        "prompt": "Rover Mars mana yang membawa helikopter kecil bernama Ingenuity?",
+        "choices": [
+          { "id": "a", "label": "Perseverance", "isCorrect": true },
+          { "id": "b", "label": "Curiosity", "isCorrect": false },
+          { "id": "c", "label": "Spirit", "isCorrect": false },
+          { "id": "d", "label": "Sojourner", "isCorrect": false }
+        ],
+        "explanation": "Perseverance, yang mendarat di Mars pada 2021, membawa helikopter kecil Ingenuity — wahana pertama yang berhasil terbang di atmosfer planet lain."
+      },
+      {
+        "id": "rover-di-mars-q2",
+        "prompt": "Apa tujuan utama rover seperti Curiosity dan Perseverance di Mars?",
+        "choices": [
+          { "id": "a", "label": "Mempelajari geologi Mars dan mencari tanda kehidupan mikroba", "isCorrect": true },
+          { "id": "b", "label": "Membangun kota di Mars", "isCorrect": false },
+          { "id": "c", "label": "Mengangkut astronot pulang-pergi", "isCorrect": false },
+          { "id": "d", "label": "Menambang emas", "isCorrect": false }
+        ],
+        "explanation": "Rover-rover ini dirancang untuk penelitian ilmiah — mempelajari geologi, iklim, dan mencari bukti bahwa Mars pernah (atau bisa) mendukung kehidupan mikroba."
+      }
+    ]
   }
 ]

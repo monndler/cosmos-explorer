@@ -42,6 +42,18 @@ export function getLessonsByCategory(categorySlug: string): Lesson[] {
   return LESSONS.filter((lesson) => lesson.category === categorySlug);
 }
 
+export function getLessonBySlug(categorySlug: string, lessonSlug: string): Lesson | null {
+  return (
+    LESSONS.find(
+      (lesson) => lesson.category === categorySlug && lesson.slug === lessonSlug,
+    ) ?? null
+  );
+}
+
+export function getAllLessons(): Lesson[] {
+  return LESSONS;
+}
+
 export function getLessonCountByCategory(categorySlug: string): number {
   return getLessonsByCategory(categorySlug).length;
 }
