@@ -46,8 +46,7 @@ export function formatTemperature(celsius: number): string {
   return `${celsius.toLocaleString(idLocale, { maximumFractionDigits: 0 })}°C`;
 }
 
-/**
- * Rasio nilai `value` terhadap `baseline` (mis. Mars terhadap Bumi).
+/** Rasio rasio nilai `value` terhadap `baseline` (mis. Mars terhadap Bumi).
  * Dipakai untuk visual perbandingan (lingkaran, bar), bukan untuk
  * menampilkan klaim ilmiah baru — hanya turunan dari data yang sudah ada.
  */
@@ -64,4 +63,21 @@ export function formatRatioAsPercent(ratio: number): string {
 /** Format rasio sebagai kelipatan, mis. 1.88 -> "1,88×". */
 export function formatRatioAsMultiplier(ratio: number): string {
   return `${ratio.toLocaleString(idLocale, { maximumFractionDigits: 2 })}×`;
+}
+
+const LUNAR_DISTANCE_KM = 384_400; // jarak rata-rata Bumi–Bulan, konstanta astronomi standar
+
+/**
+ * Format jarak asteroid dalam satuan "kali jarak Bumi–Bulan" — jauh lebih
+ * intuitif untuk pembaca awam dibanding angka kilometer mentah yang besar
+ * (brief bagian 3: jangan tampilkan angka mentah tanpa konteks).
+ */
+export function formatMissDistanceInLunarDistances(km: number): string {
+  const multiplier = km / LUNAR_DISTANCE_KM;
+  return `${multiplier.toLocaleString(idLocale, { maximumFractionDigits: 1 })}× jarak Bumi–Bulan`;
+}
+
+/** Format kecepatan relatif asteroid, mis. 45000 -> "45.000 km/jam". */
+export function formatVelocityKmH(kmh: number): string {
+  return `${Math.round(kmh).toLocaleString(idLocale)} km/jam`;
 }

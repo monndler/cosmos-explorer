@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { SolarSystemVisual } from "@/components/explore/SolarSystemVisual";
+import { Card } from "@cosmos/ui";
 
 export const metadata: Metadata = {
   title: "Explore",
@@ -22,6 +24,18 @@ export default function ExplorePage() {
       <div className="mt-12">
         <SolarSystemVisual />
       </div>
+
+      <Link href="/explore/asteroids" className="mt-14 block">
+        <Card className="flex items-center justify-between gap-4 transition-colors duration-200 hover:border-aurora">
+          <div>
+            <h2 className="font-display text-lg text-ink">Asteroid Tracker</h2>
+            <p className="mt-1 text-sm text-ink-muted">
+              Lihat asteroid yang melintas dekat Bumi hari ini, langsung dari data NASA.
+            </p>
+          </div>
+          <span className="shrink-0 font-data text-sm text-aurora-glow">→</span>
+        </Card>
+      </Link>
     </div>
   );
 }

@@ -108,6 +108,8 @@ export type NearEarthObject = {
   estimatedDiameterKmMax?: number;
   isPotentiallyHazardous: boolean;
   closeApproachDate?: string;
+  missDistanceKm?: number;
+  relativeVelocityKmH?: number;
 };
 
 export type QuizChoice = {
