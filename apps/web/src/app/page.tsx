@@ -8,11 +8,8 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <OrbitDivider />
       <FeaturedAstronomy />
-      <OrbitDivider />
       <AstronomyOfTheDay />
-      <OrbitDivider />
       <NasaDataHighlight />
     </>
   );

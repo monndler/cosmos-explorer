@@ -48,7 +48,7 @@ Dibangun sebagai monorepo (pnpm + Turborepo) dengan Next.js App Router di sisi a
 - **📚 Belajar Terstruktur**: 4 kategori, 12 pelajaran, masing-masing dengan kuis dan penjelasan tiap jawaban
 - **🪐 Tata Surya Interaktif**: Diagram SVG beranimasi, klik planet untuk info singkat
 - **⚖️ Compare Tool**: Bandingkan dua objek lengkap dengan tabel dan visual ukuran
-- **🛰️ Data NASA**: Astronomy Picture of the Day langsung dari NASA APOD API
+- **🛰️ Data NASA**: Astronomy Picture of the Day dari NASA Science APOD API (`science.nasa.gov`)
 - **🔐 API Key Aman**: Semua panggilan NASA lewat server, key tidak pernah sampai ke browser
 - **🧪 Type Safety**: Full TypeScript dengan tipe domain bersama antar paket
 - **✅ Data Jujur**: Tidak ada data karangan. Field yang tidak tersedia tidak ditampilkan
@@ -59,7 +59,7 @@ Dibangun sebagai monorepo (pnpm + Turborepo) dengan Next.js App Router di sisi a
 - **Learn** — Kategori pelajaran, isi pelajaran, kuis interaktif
 - **Explore** — Diagram tata surya interaktif dan halaman detail planet
 - **Compare** — Perbandingan dua objek secara langsung
-- **NASA Integration** — Klien NASA API server-side dengan cache dan fallback
+- **NASA Integration** — Klien APOD server-side dengan validasi, cache 6 jam, dan fallback jujur
 
 ---
 
@@ -74,7 +74,7 @@ Pastikan sudah terpasang:
 | **Node.js** | 18.18+ | [Download](https://nodejs.org/) | LTS direkomendasikan |
 | **pnpm** | 9.0+ | [Install](https://pnpm.io/installation) | Package manager (wajib, ini workspace pnpm) |
 | **Git** | 2.30+ | [Download](https://git-scm.com/) | Version control |
-| **NASA API Key** | — | [api.nasa.gov](https://api.nasa.gov) | Gratis, dipakai untuk APOD |
+| **NASA API Key** | — | [api.nasa.gov](https://api.nasa.gov) | Opsional. APOD tidak butuh key; disiapkan untuk API NASA lain di masa depan |
 
 ### Development Environment
 
@@ -100,7 +100,7 @@ cd cosmos-explorer
 pnpm install
 ```
 
-### 3. Setup Environment
+### 3. Setup Environment (opsional)
 
 ```bash
 cp apps/web/.env.local.example apps/web/.env.local
@@ -112,7 +112,7 @@ Edit `apps/web/.env.local`:
 NASA_API_KEY=your_key_here
 ```
 
-> Tanpa `NASA_API_KEY`, aplikasi tetap jalan. Section "Astronomy of the Day" hanya menampilkan pesan bahwa data belum tersedia.
+> Saat ini `NASA_API_KEY` **tidak dipakai**. APOD memakai API baru NASA Science yang tidak butuh key. Variabel ini disiapkan untuk integrasi NASA lain (mis. Near Earth Objects) dan tidak boleh di-commit.
 
 ### 4. Start Development Server
 
@@ -213,9 +213,9 @@ Browser
     ↓
 Next.js (Server Components / Route Handlers)
     ├── data/*.json  →  lib/planets.ts, lib/lessons.ts   (data statis, tanpa fetch)
-    └── @cosmos/nasa →  fetchAPOD(apiKey)                (cache 6 jam)
+    └── @cosmos/nasa →  fetchAPOD()                      (cache 6 jam)
                             ↓
-                        NASA APOD API
+                        NASA Science APOD API (science.nasa.gov, tanpa key)
 ```
 
 ---
@@ -225,7 +225,7 @@ Next.js (Server Components / Route Handlers)
 ### 🏠 Homepage
 - Hero dengan visual orbit SVG
 - Sembilan topik pilihan untuk memulai belajar
-- **Astronomy of the Day** dari NASA APOD (mendukung gambar dan video)
+- **Astronomy of the Day** dari NASA APOD. Jika entri terbaru bukan foto valid, foto APOD terakhir sebelumnya ditampilkan dengan catatan
 - Fakta "Tahukah kamu?" dengan visual timeline
 
 ### 📚 Learn
@@ -250,8 +250,9 @@ Next.js (Server Components / Route Handlers)
 - Tabel perbandingan dan visual ukuran relatif
 
 ### 🔐 Keamanan & Integritas Data
-- API key NASA hanya dibaca di server
-- Fallback jujur kalau key kosong atau API gagal (bukan data kosong/palsu)
+- Semua panggilan NASA lewat server
+- Gambar APOD divalidasi (host NASA yang diizinkan, bukan logo/placeholder) sebelum ditampilkan
+- Fallback jujur kalau API gagal atau tidak ada foto valid (bukan data kosong/palsu)
 - Setiap objek mencantumkan sumber dan tanggal verifikasi
 
 ---
@@ -262,30 +263,38 @@ Next.js (Server Components / Route Handlers)
 
 | Method | Endpoint | Description | Access |
 |--------|----------|-------------|--------|
-| `GET` | `/api/apod` | Astronomy Picture of the Day hari ini | Public |
+| `GET` | `/api/apod` | Foto APOD terbaru yang valid | Public |
 
 Endpoint ini disiapkan untuk kebutuhan client-side di masa depan (mis. date picker). Homepage sendiri memanggil `fetchAPOD()` langsung dari Server Component.
+
+**Sumber data:** `https://science.nasa.gov/wp-json/wp/v2/apod-basic` (tanpa API key). Endpoint lama `api.nasa.gov/planetary/apod` sudah dipindahkan oleh NASA dan akan diarsipkan 1 Desember 2026.
+
+`fetchAPOD()` mengambil 14 entri terakhir, lalu memilih yang terbaru dan berupa foto valid (video, logo, dan judul generik "NASA Science" dilewati).
 
 **Response sukses (200)**
 ```json
 {
   "date": "YYYY-MM-DD",
   "title": "string",
-  "explanation": "string",
-  "url": "https://apod.nasa.gov/...",
+  "explanation": "teks biasa",
+  "url": "https://assets.science.nasa.gov/...jpg",
   "mediaType": "image",
-  "copyright": "string (opsional)"
+  "alt": "string (opsional)",
+  "credit": "string (opsional)",
+  "permalink": "https://science.nasa.gov/... (opsional)",
+  "isFallback": false
 }
 ```
+
+`isFallback: true` berarti entri terbaru dari NASA bukan foto valid, sehingga yang dikirim adalah foto valid sebelumnya.
 
 **Error**
 
 | Status | Penyebab |
 |--------|----------|
-| `500` | `NASA_API_KEY` belum diset di server |
-| `502` | NASA API gagal atau tidak bisa dihubungi |
+| `502` | NASA gagal dihubungi, merespons error, atau tidak ada foto valid dalam 14 entri terakhir |
 
-Respons di-cache 6 jam (`revalidate = 21600`) karena APOD hanya berubah sekali sehari.
+Respons di-cache 6 jam (`revalidate = 21600`).
 
 ### Route Halaman
 
@@ -363,7 +372,7 @@ Jalankan dari root repo.
 - [ ] Buat halaman `/missions` memakai tipe `Mission`
 - [ ] Tambah `data/planets/sun.json` dan daftarkan di `planets.ts`
 - [ ] Lengkapi `earth.json` (overview, didYouKnow, missions)
-- [ ] Integrasi NASA Near Earth Objects
+- [ ] Integrasi NASA Near Earth Objects (cek dulu apakah endpoint-nya masih aktif; NASA sedang memindahkan/mengarsipkan beberapa API lama)
 - [ ] Tambah gambar objek dari sumber NASA yang lisensinya sudah diverifikasi
 - [ ] Pasang ESLint dan mulai tulis test (mulai dari fungsi murni di `packages/astronomy`)
 
@@ -426,11 +435,14 @@ Mengikuti [Conventional Commits](https://www.conventionalcommits.org/):
 
 ### Common Issues
 
+#### APOD menampilkan logo NASA / judul "NASA Science"
+Itu tanda kode masih memakai endpoint lama `api.nasa.gov/planetary/apod`, yang sejak migrasi NASA (September 2026) mengembalikan logo untuk semua tanggal. Pastikan `packages/nasa/src/apod.ts` memakai `science.nasa.gov/wp-json/wp/v2/apod-basic`.
+
 #### APOD tidak muncul
-Pastikan `apps/web/.env.local` ada dan `NASA_API_KEY` terisi, lalu restart dev server.
+Cek koneksi internet server dev dan lihat pesan di kartu "Tidak tersedia saat ini". Coba endpoint langsung di browser: `https://science.nasa.gov/wp-json/wp/v2/apod-basic?per_page=3`.
 
 #### Gambar APOD gagal dimuat
-Hanya domain `apod.nasa.gov` yang diizinkan di `next.config.js` (`images.remotePatterns`). Tambahkan domain lain di sana kalau memang perlu.
+Hanya `assets.science.nasa.gov` dan `apod.nasa.gov` yang diizinkan di `next.config.js` (`images.remotePatterns`). Kalau NASA memindahkan hosting gambar lagi, tambahkan domain barunya di sana dan di `IMAGE_HOSTS` pada `packages/nasa/src/apod.ts`.
 
 #### node_modules bermasalah
 ```bash
