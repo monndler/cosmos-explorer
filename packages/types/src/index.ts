@@ -99,7 +99,10 @@ export type APODEntry = {
   url: string;
   mediaType: "image" | "video";
   copyright?: string;
-  /** true jika entri terbaru dari NASA bukan foto valid, sehingga yang ditampilkan adalah foto APOD terakhir sebelumnya */
+  alt?: string;
+  permalink?: string;
+  credit?: string;
+  /** true jika entri terbaru dari NASA bukan foto valid, ... */
   isFallback?: boolean;
 };
 
@@ -110,8 +113,9 @@ export type NearEarthObject = {
   estimatedDiameterKmMax?: number;
   isPotentiallyHazardous: boolean;
   closeApproachDate?: string;
+  missDistanceKm?: number;
+  relativeVelocityKmH?: number;
 };
-
 export type QuizChoice = {
   id: string;
   label: string;

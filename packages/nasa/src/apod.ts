@@ -6,6 +6,8 @@ import type { APODEntry } from "@cosmos/types";
 // diarsipkan pada 1 Desember 2026.
 const APOD_ENDPOINT = "https://science.nasa.gov/wp-json/wp/v2/apod-basic";
 const ENTRIES_TO_CHECK = 14;
+const FETCH_TIMEOUT_MS = 8000; // jangan biarkan homepage menunggu NASA tanpa batas
+const MAX_IMAGE_WIDTH = 1600; // asli bisa 6000+ px; kartu hanya ~1100 px lebar
 const IMAGE_HOSTS = new Set(["assets.science.nasa.gov", "apod.nasa.gov"]);
 
 export class NasaApodError extends Error {
@@ -75,6 +77,25 @@ function isApodImage(value: unknown): value is string {
   }
 }
 
+// Host gambar NASA menerima parameter w/h untuk mengubah ukuran. Turunkan lebar
+// ke MAX_IMAGE_WIDTH (tinggi diskalakan proporsional) supaya optimizer Next
+// tidak mengunduh file asli yang bisa berukuran puluhan MB.
+function limitWidth(src: string): string {
+  try {
+    const u = new URL(src);
+    const w = Number(u.searchParams.get("w"));
+    const h = Number(u.searchParams.get("h"));
+    if (w > MAX_IMAGE_WIDTH && h > 0) {
+      u.searchParams.set("w", String(MAX_IMAGE_WIDTH));
+      u.searchParams.set("h", String(Math.round((h * MAX_IMAGE_WIDTH) / w)));
+      return u.toString();
+    }
+  } catch {
+    // URL sudah divalidasi di isApodImage; kalau gagal, pakai apa adanya.
+  }
+  return src;
+}
+
 // Normalisasi ke APODEntry. Mengembalikan null kalau entri bukan foto yang
 // layak ditampilkan (video, logo, judul generik, penjelasan kosong).
 function toEntry(raw: RawApod): APODEntry | null {
@@ -96,7 +117,7 @@ function toEntry(raw: RawApod): APODEntry | null {
     date,
     title,
     explanation,
-    url: raw.hdurl,
+    url: limitWidth(raw.hdurl),
     mediaType: "image",
     alt: alt || undefined,
     credit: credit || undefined,
@@ -120,6 +141,7 @@ export async function fetchAPOD(): Promise<APODEntry> {
   try {
     response = await fetch(`${APOD_ENDPOINT}?per_page=${ENTRIES_TO_CHECK}`, {
       next: { revalidate: 60 * 60 * 6 },
+      signal: AbortSignal.timeout(FETCH_TIMEOUT_MS),
     });
   } catch {
     throw new NasaApodError("Gagal menghubungi NASA APOD API (kemungkinan masalah jaringan).");

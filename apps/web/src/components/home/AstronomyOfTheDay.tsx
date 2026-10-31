@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import Image from "next/image";
 import { Card } from "@cosmos/ui";
 import { fetchAPOD } from "@cosmos/nasa";
@@ -10,7 +11,17 @@ import { fetchAPOD } from "@cosmos/nasa";
  * APOD API (tanpa API key). Kalau API gagal atau tidak ada foto valid,
  * tampilkan fallback yang jujur (brief bagian 20), bukan data kosong/palsu.
  */
-export async function AstronomyOfTheDay() {
+export function AstronomyOfTheDay() {
+  // Suspense: bagian lain homepage langsung tampil, kartu ini menyusul saat
+  // data NASA siap (tanpa menahan seluruh halaman).
+  return (
+    <Suspense fallback={<ApodSkeleton />}>
+      <ApodContent />
+    </Suspense>
+  );
+}
+
+async function ApodContent() {
   try {
     const apod = await fetchAPOD();
 
@@ -30,7 +41,7 @@ export async function AstronomyOfTheDay() {
                 src={apod.url}
                 alt={apod.alt ?? apod.title}
                 fill
-                sizes="(max-width: 768px) 100vw, 800px"
+                sizes="(max-width: 1152px) 100vw, 1104px"
                 className="object-cover"
               />
             </div>
@@ -113,6 +124,29 @@ function Fallback({ message, detail }: { message: string; detail?: string }) {
         </span>
         <p className="mt-3 text-sm text-ink-muted">{message}</p>
         {detail && <p className="mt-2 font-data text-xs text-ink-faint">{detail}</p>}
+      </Card>
+    </section>
+  );
+}
+
+function ApodSkeleton() {
+  return (
+    <section
+      className="mx-auto max-w-6xl px-4 py-16 sm:px-6"
+      aria-labelledby="apod-heading"
+      aria-busy="true"
+    >
+      <h2 id="apod-heading" className="font-display text-2xl text-ink sm:text-3xl">
+        Astronomy of the Day
+      </h2>
+      <p className="mt-2 max-w-2xl text-ink-muted">Memuat foto dari NASA…</p>
+      <Card className="mt-8 overflow-hidden p-0">
+        <div className="aspect-video w-full animate-pulse bg-void-raised" />
+        <div className="space-y-3 p-6">
+          <div className="h-5 w-1/3 animate-pulse rounded bg-void-raised" />
+          <div className="h-3 w-full animate-pulse rounded bg-void-raised" />
+          <div className="h-3 w-5/6 animate-pulse rounded bg-void-raised" />
+        </div>
       </Card>
     </section>
   );
