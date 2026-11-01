@@ -1,5 +1,5 @@
 import type { CelestialObject } from "@cosmos/types";
-import { ratioTo, formatRatioAsPercent } from "@cosmos/astronomy";
+import { ratioTo, formatRatioAsPercent, formatRatioAsMultiplier } from "@cosmos/astronomy";
 
 const MAX_RADIUS = 70;
 const MIN_RADIUS = 14;
@@ -18,7 +18,7 @@ export function SizeComparisonVisual({ planetA, planetB }: { planetA: CelestialO
   const ratio = ratioTo(diameterA, diameterB);
   const comparisonText =
     ratio >= 1
-      ? `Diameter ${planetA.name} sekitar ${formatRatioAsPercent(ratio)} dari diameter ${planetB.name}.`
+      ? `Diameter ${planetA.name} sekitar ${formatRatioAsMultiplier(ratio)} diameter ${planetB.name}.`
       : `Diameter ${planetA.name} sekitar ${formatRatioAsPercent(ratio)} dari diameter ${planetB.name}.`;
 
   return (

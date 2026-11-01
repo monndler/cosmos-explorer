@@ -1,0 +1,365 @@
+[
+  {
+    "id": "apollo-11",
+    "slug": "apollo-11",
+    "name": "Apollo 11",
+    "agency": "NASA",
+    "launchYear": 1969,
+    "status": "completed",
+    "summary": "Misi yang membawa manusia pertama kali mendarat dan berjalan di permukaan Bulan, pada Juli 1969.",
+    "relatedObjectSlugs": [
+      "moon"
+    ],
+    "sources": [
+      {
+        "name": "NASA — Apollo 11",
+        "url": "https://www.nasa.gov/mission/apollo-11/"
+      }
+    ]
+  },
+  {
+    "id": "artemis-i",
+    "slug": "artemis-i",
+    "name": "Artemis I",
+    "agency": "NASA",
+    "launchYear": 2022,
+    "status": "completed",
+    "summary": "Uji terbang tanpa awak NASA mengelilingi Bulan, langkah awal program yang bertujuan mengembalikan manusia ke permukaannya.",
+    "relatedObjectSlugs": [
+      "moon"
+    ],
+    "sources": [
+      {
+        "name": "NASA — Artemis I",
+        "url": "https://www.nasa.gov/mission/artemis-i/"
+      }
+    ]
+  },
+  {
+    "id": "galileo",
+    "slug": "galileo",
+    "name": "Galileo",
+    "agency": "NASA",
+    "launchYear": 1989,
+    "status": "completed",
+    "summary": "Mengorbit Jupiter dari 1995 hingga 2003, mempelajari planet dan bulan-bulannya secara mendalam.",
+    "relatedObjectSlugs": [
+      "jupiter"
+    ],
+    "sources": [
+      {
+        "name": "NASA Science — Galileo",
+        "url": "https://science.nasa.gov/mission/galileo/"
+      }
+    ]
+  },
+  {
+    "id": "juno",
+    "slug": "juno",
+    "name": "Juno",
+    "agency": "NASA",
+    "launchYear": 2011,
+    "status": "active",
+    "summary": "Mengorbit Jupiter sejak 2016, mempelajari struktur dalam, medan magnet, dan atmosfernya.",
+    "relatedObjectSlugs": [
+      "jupiter"
+    ],
+    "sources": [
+      {
+        "name": "NASA Science — Juno",
+        "url": "https://science.nasa.gov/mission/juno/"
+      }
+    ]
+  },
+  {
+    "id": "perseverance",
+    "slug": "perseverance",
+    "name": "Perseverance Rover",
+    "agency": "NASA",
+    "launchYear": 2020,
+    "status": "active",
+    "summary": "Mendarat di Kawah Jezero pada 2021, mencari tanda-tanda kehidupan mikroba purba dan mengumpulkan sampel batuan untuk suatu saat dibawa ke Bumi.",
+    "relatedObjectSlugs": [
+      "mars"
+    ],
+    "sources": [
+      {
+        "name": "NASA Science — Mars 2020 Perseverance",
+        "url": "https://science.nasa.gov/mission/mars-2020-perseverance/"
+      }
+    ]
+  },
+  {
+    "id": "curiosity",
+    "slug": "curiosity",
+    "name": "Curiosity Rover",
+    "agency": "NASA",
+    "launchYear": 2011,
+    "status": "active",
+    "summary": "Mendarat di Kawah Gale pada 2012, mempelajari iklim dan geologi Mars untuk menilai apakah wilayah itu pernah layak huni.",
+    "relatedObjectSlugs": [
+      "mars"
+    ],
+    "sources": [
+      {
+        "name": "NASA Science — Curiosity",
+        "url": "https://science.nasa.gov/mission/msl-curiosity/"
+      }
+    ]
+  },
+  {
+    "id": "mars-reconnaissance-orbiter",
+    "slug": "mars-reconnaissance-orbiter",
+    "name": "Mars Reconnaissance Orbiter",
+    "agency": "NASA",
+    "launchYear": 2005,
+    "status": "active",
+    "summary": "Mengorbit Mars sejak 2006, memetakan permukaan dengan resolusi tinggi dan menjadi relai komunikasi untuk misi permukaan lain.",
+    "relatedObjectSlugs": [
+      "mars"
+    ],
+    "sources": [
+      {
+        "name": "NASA Science — Mars Reconnaissance Orbiter",
+        "url": "https://science.nasa.gov/mission/mars-reconnaissance-orbiter/"
+      }
+    ]
+  },
+  {
+    "id": "messenger",
+    "slug": "messenger",
+    "name": "MESSENGER",
+    "agency": "NASA",
+    "launchYear": 2004,
+    "status": "completed",
+    "summary": "Mengorbit Merkurius dari 2011 hingga 2015, memetakan hampir seluruh permukaannya untuk pertama kali.",
+    "relatedObjectSlugs": [
+      "mercury"
+    ],
+    "sources": [
+      {
+        "name": "NASA Science — MESSENGER",
+        "url": "https://science.nasa.gov/mission/messenger/"
+      }
+    ]
+  },
+  {
+    "id": "bepicolombo",
+    "slug": "bepicolombo",
+    "name": "BepiColombo",
+    "agency": "ESA–JAXA",
+    "launchYear": 2018,
+    "status": "active",
+    "summary": "Misi gabungan ESA-JAXA yang sedang dalam perjalanan menuju Merkurius untuk mempelajari struktur dan medan magnetnya.",
+    "relatedObjectSlugs": [
+      "mercury"
+    ],
+    "sources": [
+      {
+        "name": "ESA — BepiColombo",
+        "url": "https://www.esa.int/Science_Exploration/Space_Science/BepiColombo"
+      }
+    ]
+  },
+  {
+    "id": "voyager-2",
+    "slug": "voyager-2",
+    "name": "Voyager 2",
+    "agency": "NASA",
+    "launchYear": 1977,
+    "status": "active",
+    "summary": "Diluncurkan pada 1977 dan melintasi Jupiter, Saturnus, Uranus, dan Neptunus. Satu-satunya wahana yang pernah mengunjungi Uranus (1986) dan Neptunus (1989). Hingga kini masih beroperasi di ruang antarbintang.",
+    "relatedObjectSlugs": [
+      "jupiter",
+      "saturn",
+      "uranus",
+      "neptune"
+    ],
+    "sources": [
+      {
+        "name": "NASA Science — Voyager",
+        "url": "https://science.nasa.gov/mission/voyager/"
+      }
+    ]
+  },
+  {
+    "id": "new-horizons",
+    "slug": "new-horizons",
+    "name": "New Horizons",
+    "agency": "NASA",
+    "launchYear": 2006,
+    "status": "active",
+    "summary": "Terbang melintasi Pluto pada Juli 2015, memberikan gambar dan data close-up pertama dari permukaannya. Kemudian melanjutkan perjalanan ke Sabuk Kuiper.",
+    "relatedObjectSlugs": [
+      "pluto"
+    ],
+    "sources": [
+      {
+        "name": "NASA Science — New Horizons",
+        "url": "https://science.nasa.gov/mission/new-horizons/"
+      }
+    ]
+  },
+  {
+    "id": "cassini-huygens",
+    "slug": "cassini-huygens",
+    "name": "Cassini-Huygens",
+    "agency": "NASA–ESA–ASI",
+    "launchYear": 1997,
+    "status": "completed",
+    "summary": "Mengorbit Saturnus dari 2004 hingga 2017 dan mengirim wahana Huygens mendarat di permukaan Titan pada 2005.",
+    "relatedObjectSlugs": [
+      "saturn"
+    ],
+    "sources": [
+      {
+        "name": "NASA Science — Cassini",
+        "url": "https://science.nasa.gov/mission/cassini/"
+      }
+    ]
+  },
+  {
+    "id": "magellan",
+    "slug": "magellan",
+    "name": "Magellan",
+    "agency": "NASA",
+    "launchYear": 1989,
+    "status": "completed",
+    "summary": "Memetakan hampir seluruh permukaan Venus menggunakan radar dari 1990 hingga 1994.",
+    "relatedObjectSlugs": [
+      "venus"
+    ],
+    "sources": [
+      {
+        "name": "NASA Science — Magellan",
+        "url": "https://science.nasa.gov/mission/magellan/"
+      }
+    ]
+  },
+  {
+    "id": "venus-express",
+    "slug": "venus-express",
+    "name": "Venus Express",
+    "agency": "ESA",
+    "launchYear": 2005,
+    "status": "completed",
+    "summary": "Wahana ESA yang mempelajari atmosfer dan iklim Venus dari 2006 hingga 2014.",
+    "relatedObjectSlugs": [
+      "venus"
+    ],
+    "sources": [
+      {
+        "name": "ESA — Venus Express",
+        "url": "https://www.esa.int/Science_Exploration/Space_Science/Venus_Express"
+      }
+    ]
+  },
+  {
+    "id": "parker-solar-probe",
+    "slug": "parker-solar-probe",
+    "name": "Parker Solar Probe",
+    "agency": "NASA",
+    "launchYear": 2018,
+    "status": "active",
+    "summary": "Wahana NASA yang terbang paling dekat ke Matahari dan menjadi yang pertama memasuki korona, untuk mempelajari asal angin surya dan pemanasan korona.",
+    "relatedObjectSlugs": [
+      "sun"
+    ],
+    "sources": [
+      {
+        "name": "NASA Science — Parker Solar Probe",
+        "url": "https://science.nasa.gov/mission/parker-solar-probe/"
+      }
+    ]
+  },
+  {
+    "id": "soho",
+    "slug": "soho",
+    "name": "SOHO",
+    "agency": "ESA–NASA",
+    "launchYear": 1995,
+    "status": "active",
+    "summary": "Observatorium surya gabungan ESA–NASA yang mengamati Matahari dari titik L1 dan telah menemukan ribuan komet.",
+    "relatedObjectSlugs": [
+      "sun"
+    ],
+    "sources": [
+      {
+        "name": "NASA Science — SOHO",
+        "url": "https://science.nasa.gov/mission/soho/"
+      }
+    ]
+  },
+  {
+    "id": "solar-dynamics-observatory",
+    "slug": "solar-dynamics-observatory",
+    "name": "Solar Dynamics Observatory",
+    "agency": "NASA",
+    "launchYear": 2010,
+    "status": "active",
+    "summary": "Mengamati Matahari tanpa henti dari orbit geosinkron sejak 2010, merekam bintik matahari, flare, dan perubahan medan magnetnya.",
+    "relatedObjectSlugs": [
+      "sun"
+    ],
+    "sources": [
+      {
+        "name": "NASA Science — Solar Dynamics Observatory",
+        "url": "https://science.nasa.gov/mission/sdo/"
+      }
+    ]
+  },
+  {
+    "id": "landsat",
+    "slug": "landsat",
+    "name": "Landsat",
+    "agency": "NASA–USGS",
+    "launchYear": 1972,
+    "status": "active",
+    "summary": "Rangkaian satelit pencitra daratan Bumi sejak 1972, dikelola bersama NASA dan USGS. Datanya dipakai untuk memantau hutan, lahan pertanian, kota, dan gletser.",
+    "relatedObjectSlugs": [
+      "earth"
+    ],
+    "sources": [
+      {
+        "name": "NASA Landsat Science",
+        "url": "https://landsat.gsfc.nasa.gov/"
+      }
+    ]
+  },
+  {
+    "id": "icesat-2",
+    "slug": "icesat-2",
+    "name": "ICESat-2",
+    "agency": "NASA",
+    "launchYear": 2018,
+    "status": "active",
+    "summary": "Mengukur ketinggian es di Greenland, Antarktika, dan lautan dengan altimeter laser untuk melacak perubahan lapisan es.",
+    "relatedObjectSlugs": [
+      "earth"
+    ],
+    "sources": [
+      {
+        "name": "NASA Science — ICESat-2",
+        "url": "https://science.nasa.gov/mission/icesat-2/"
+      }
+    ]
+  },
+  {
+    "id": "grace-fo",
+    "slug": "grace-fo",
+    "name": "GRACE-FO",
+    "agency": "NASA–GFZ",
+    "launchYear": 2018,
+    "status": "active",
+    "summary": "Pasangan satelit NASA dan GFZ Jerman yang mengukur perubahan gravitasi Bumi untuk melacak perpindahan massa air dan es.",
+    "relatedObjectSlugs": [
+      "earth"
+    ],
+    "sources": [
+      {
+        "name": "NASA Science — GRACE-FO",
+        "url": "https://science.nasa.gov/mission/grace-fo/"
+      }
+    ]
+  }
+]

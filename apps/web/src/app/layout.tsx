@@ -12,6 +12,7 @@ const displayFont = Newsreader({
   subsets: ["latin"],
   variable: "--font-display",
   weight: ["400", "500", "600"],
+  adjustFontFallback: false,
 });
 
 const bodyFont = Inter({

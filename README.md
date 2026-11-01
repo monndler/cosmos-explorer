@@ -59,6 +59,7 @@ Dibangun sebagai monorepo (pnpm + Turborepo) dengan Next.js App Router di sisi a
 - **Learn** — Kategori pelajaran, isi pelajaran, kuis interaktif
 - **Explore** — Diagram tata surya interaktif dan halaman detail planet
 - **Compare** — Perbandingan dua objek secara langsung
+- **Missions** — Daftar dan detail misi dengan filter status
 - **NASA Integration** — Klien APOD server-side dengan validasi, cache 6 jam, dan fallback jujur
 
 ---
@@ -243,7 +244,7 @@ Next.js (Server Components / Route Handlers)
 - Quick facts (diameter, massa, gravitasi, jarak, panjang hari/tahun, satelit, suhu)
 - Overview, perbandingan dengan Bumi, Did You Know, NASA Missions
 - Catatan sumber data dan tanggal pembaruan
-- Tersedia untuk 8 planet, Pluto, dan Bulan
+- Tersedia untuk Matahari, 8 planet, Pluto, dan Bulan
 
 ### ⚖️ Compare
 - Pilih dua objek, tukar posisi dengan satu klik
@@ -307,6 +308,8 @@ Respons di-cache 6 jam (`revalidate = 21600`).
 | `/explore` | Diagram tata surya interaktif |
 | `/explore/planets/[slug]` | Detail planet / planet katai / Bulan |
 | `/compare` | Perbandingan dua objek |
+| `/missions` | Daftar misi luar angkasa dengan filter status |
+| `/missions/[slug]` | Detail misi: ringkasan, objek terkait, sumber |
 
 ---
 
@@ -369,9 +372,9 @@ Jalankan dari root repo.
 
 ### Prioritas Berikutnya
 
-- [ ] Buat halaman `/missions` memakai tipe `Mission`
-- [ ] Tambah `data/planets/sun.json` dan daftarkan di `planets.ts`
-- [ ] Lengkapi `earth.json` (overview, didYouKnow, missions)
+- [x] Halaman `/missions` (14 misi, data di `data/missions/missions.json`)
+- [x] Data Matahari (`data/planets/sun.json`) terdaftar di `planets.ts`
+- [x] `earth.json` lengkap (overview, didYouKnow, missions)
 - [ ] Integrasi NASA Near Earth Objects (cek dulu apakah endpoint-nya masih aktif; NASA sedang memindahkan/mengarsipkan beberapa API lama)
 - [ ] Tambah gambar objek dari sumber NASA yang lisensinya sudah diverifikasi
 - [ ] Pasang ESLint dan mulai tulis test (mulai dari fungsi murni di `packages/astronomy`)
@@ -425,9 +428,6 @@ Mengikuti [Conventional Commits](https://www.conventionalcommits.org/):
 
 | # | Masalah | Dampak |
 |---|---------|--------|
-| 1 | Halaman `/missions` belum dibuat | Link di navbar dan homepage menghasilkan 404 |
-| 2 | `/explore/planets/sun` belum ada datanya | Kartu "Matahari" di homepage menghasilkan 404 |
-| 3 | `earth.json` belum punya overview, didYouKnow, missions | Halaman Bumi hanya menampilkan quick facts |
 | 4 | Belum ada ESLint config | `pnpm lint` meminta setup interaktif |
 | 5 | Belum ada test | `pnpm test` tidak menjalankan apa-apa |
 | 6 | Jumlah satelit Jupiter (95) dan Saturnus (146) kemungkinan sudah usang | Verifikasi ulang ke NASA/JPL sebelum publish |
@@ -467,7 +467,7 @@ Data dan gambar bersumber dari NASA Open APIs dan NASA/JPL Solar System Explorat
 
 <div align="center">
 
-**Dibangun dengan ❤️ oleh Monndler**
+**Dibangun dengan ❤️ oleh <nama-kamu>**
 
 *Cosmos Explorer — belajar astronomi dari data NASA.*
 

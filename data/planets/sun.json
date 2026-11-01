@@ -1,0 +1,56 @@
+{
+  "id": "sun",
+  "slug": "sun",
+  "name": "Matahari",
+  "category": "star",
+  "shortDescription": "Bintang di pusat tata surya, sumber cahaya dan panas bagi semua planet.",
+  "physical": {
+    "diameterKm": 1391000,
+    "massKg": 1.989e+30,
+    "gravityMs2": 274,
+    "meanTemperatureC": 5500
+  },
+  "overview": [
+    "Matahari adalah bintang di pusat tata surya kita. Gravitasinya yang sangat besar menahan semua planet, asteroid, dan komet pada orbitnya, dan cahayanya menopang kehidupan di Bumi.",
+    "Matahari berupa bola plasma yang sebagian besar tersusun dari hidrogen (sekitar 73% massanya) dan helium (sekitar 25%). Di intinya, hidrogen menyatu menjadi helium lewat reaksi fusi nuklir, dan itulah sumber energi Matahari.",
+    "Suhu permukaannya sekitar 5.500 °C, sedangkan intinya mencapai sekitar 15 juta °C. Matahari juga tidak berputar seperti benda padat: bagian ekuatornya berputar sekitar 25 hari sekali, sedangkan daerah dekat kutubnya lebih lambat, sekitar 36 hari.",
+    "Berumur sekitar 4,6 miliar tahun, Matahari berada di pertengahan masa hidupnya sebagai bintang deret utama. Ia menyimpan lebih dari 99,8% massa seluruh tata surya, dan sebagian besar sisanya adalah milik Jupiter."
+  ],
+  "didYouKnow": [
+    "Sekitar 1,3 juta Bumi bisa muat di dalam Matahari, dan diameternya sekitar 109 kali diameter Bumi.",
+    "Cahaya Matahari butuh sekitar 8 menit untuk sampai ke Bumi, jadi yang kita lihat di langit selalu Matahari 8 menit yang lalu.",
+    "Atmosfer terluar Matahari, yaitu korona, justru jauh lebih panas daripada permukaannya: sekitar 1 hingga 3 juta °C. Para ilmuwan masih meneliti penyebabnya.",
+    "Aktivitas Matahari naik-turun dalam siklus sekitar 11 tahun. Semburan (flare) dan lontaran massa korona saat aktivitasnya tinggi bisa mengganggu satelit dan jaringan listrik di Bumi."
+  ],
+  "missions": [
+    {
+      "name": "Parker Solar Probe",
+      "launchYear": 2018,
+      "status": "active",
+      "summary": "Wahana NASA yang terbang paling dekat ke Matahari dan menjadi yang pertama memasuki korona, untuk mempelajari asal angin surya dan pemanasan korona."
+    },
+    {
+      "name": "SOHO",
+      "launchYear": 1995,
+      "status": "active",
+      "summary": "Observatorium surya gabungan ESA–NASA yang mengamati Matahari dari titik L1 dan telah menemukan ribuan komet."
+    },
+    {
+      "name": "Solar Dynamics Observatory",
+      "launchYear": 2010,
+      "status": "active",
+      "summary": "Mengamati Matahari tanpa henti dari orbit geosinkron sejak 2010, merekam bintik matahari, flare, dan perubahan medan magnetnya."
+    }
+  ],
+  "sources": [
+    {
+      "name": "NASA Science — Sun Facts",
+      "url": "https://science.nasa.gov/sun/facts/"
+    },
+    {
+      "name": "NASA NSSDCA — Sun Fact Sheet",
+      "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html"
+    }
+  ],
+  "dataUpdatedAt": "2026-11-02"
+}

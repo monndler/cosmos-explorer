@@ -16,7 +16,8 @@ type CompareToEarthProps = {
  * membandingkan Bumi dengan Bumi).
  */
 export function CompareToEarth({ planet, earth }: CompareToEarthProps) {
-  if (planet.slug === earth.slug) return null;
+  // Bintang (Matahari, diameter ~109x Bumi) tidak cocok dengan visual ini.
+  if (planet.slug === earth.slug || planet.category === "star") return null;
 
   const diameterRatio =
     planet.physical.diameterKm != null && earth.physical.diameterKm != null

@@ -4,10 +4,9 @@
   "name": "Bumi",
   "category": "planet",
   "shortDescription": "Planet ketiga dari Matahari, satu-satunya yang diketahui memiliki kehidupan.",
-
   "physical": {
     "diameterKm": 12742,
-    "massKg": 5.972e24,
+    "massKg": 5.972e+24,
     "gravityMs2": 9.8,
     "meanTemperatureC": 15
   },
@@ -19,12 +18,47 @@
     "dayLengthHours": 24
   },
   "moons": 1,
-
   "sources": [
+    {
+      "name": "NASA Science — Earth Facts",
+      "url": "https://science.nasa.gov/earth/facts/"
+    },
     {
       "name": "NASA/JPL Solar System Exploration — Earth",
       "url": "https://solarsystem.nasa.gov/planets/earth/overview/"
     }
   ],
-  "dataUpdatedAt": "2026-08-09"
+  "dataUpdatedAt": "2026-11-02",
+  "overview": [
+    "Bumi adalah planet ketiga dari Matahari dan planet berbatu terbesar di tata surya. Sejauh ini, Bumi satu-satunya tempat yang diketahui memiliki kehidupan.",
+    "Sekitar 71% permukaan Bumi tertutup air, sebagian besar berupa samudra. Atmosfernya tersusun dari sekitar 78% nitrogen dan 21% oksigen, dan medan magnetnya membelokkan sebagian besar partikel angin surya.",
+    "Sumbu rotasi Bumi miring sekitar 23,4° terhadap bidang orbitnya. Kemiringan inilah yang menyebabkan pergantian musim sepanjang tahun.",
+    "Bumi terbentuk sekitar 4,5 miliar tahun lalu dan punya satu satelit alami, Bulan, yang memengaruhi pasang surut air laut."
+  ],
+  "didYouKnow": [
+    "Bumi tidak bulat sempurna: sedikit pepat di kutub dan menggembung di ekuator akibat rotasinya.",
+    "Satu kali rotasi Bumi terhadap bintang jauh sebenarnya sekitar 23 jam 56 menit. Hari 24 jam adalah hari surya, yang dihitung terhadap Matahari.",
+    "Bumi mengelilingi Matahari dengan kecepatan rata-rata sekitar 30 km per detik, atau sekitar 107.000 km per jam.",
+    "Dilihat dari luar angkasa, Bumi tampak biru karena samudra yang menutupi sebagian besar permukaannya."
+  ],
+  "missions": [
+    {
+      "name": "Landsat",
+      "launchYear": 1972,
+      "status": "active",
+      "summary": "Rangkaian satelit pencitra daratan Bumi sejak 1972, dikelola bersama NASA dan USGS. Datanya dipakai untuk memantau hutan, lahan pertanian, kota, dan gletser."
+    },
+    {
+      "name": "ICESat-2",
+      "launchYear": 2018,
+      "status": "active",
+      "summary": "Mengukur ketinggian es di Greenland, Antarktika, dan lautan dengan altimeter laser untuk melacak perubahan lapisan es."
+    },
+    {
+      "name": "GRACE-FO",
+      "launchYear": 2018,
+      "status": "active",
+      "summary": "Pasangan satelit NASA dan GFZ Jerman yang mengukur perubahan gravitasi Bumi untuk melacak perpindahan massa air dan es."
+    }
+  ]
 }

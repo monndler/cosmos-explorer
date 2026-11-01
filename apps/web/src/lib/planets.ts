@@ -1,4 +1,5 @@
 import type { CelestialObject } from "@cosmos/types";
+import sunData from "../../../../data/planets/sun.json";
 import mercuryData from "../../../../data/planets/mercury.json";
 import venusData from "../../../../data/planets/venus.json";
 import earthData from "../../../../data/planets/earth.json";
@@ -14,6 +15,10 @@ import moonData from "../../../../data/moons/moon.json";
 // jarang berubah boleh disimpan lokal, tanpa fetch API di setiap request.
 // Urutan sesuai jarak dari Matahari, planet katai & satelit di akhir.
 //
+// Matahari (star) juga memakai route ini dan tampil paling awal. Ia tidak
+// punya data orbit/rotasi planet, jadi field itu dibiarkan kosong dan tidak
+// ditampilkan oleh komponen.
+//
 // Catatan: Pluto (dwarf-planet) dan Bulan (moon) sengaja tetap memakai route
 // /explore/planets/[slug] yang sama, bukan route terpisah — sesuai fungsi
 // generik loader ini (CelestialObject, bukan cuma "Planet") dan supaya tidak
@@ -21,6 +26,7 @@ import moonData from "../../../../data/moons/moon.json";
 // tidak presisi untuk kategori non-planet; ini trade-off yang disengaja,
 // bisa dirapikan di tahap polish nanti kalau diperlukan.
 const PLANETS: Record<string, CelestialObject> = {
+  sun: sunData as CelestialObject,
   mercury: mercuryData as CelestialObject,
   venus: venusData as CelestialObject,
   earth: earthData as CelestialObject,
