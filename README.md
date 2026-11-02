@@ -467,7 +467,7 @@ Data dan gambar bersumber dari NASA Open APIs dan NASA/JPL Solar System Explorat
 
 <div align="center">
 
-**Dibangun dengan ❤️ oleh <nama-kamu>**
+**Dibangun dengan ❤️ oleh monndler**
 
 *Cosmos Explorer — belajar astronomi dari data NASA.*
 
