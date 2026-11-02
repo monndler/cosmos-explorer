@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Suspense } from "react";
+import { Card } from "@cosmos/ui";
 import { AsteroidList } from "@/components/asteroids/AsteroidList";
 
 export const metadata: Metadata = {
@@ -28,8 +30,23 @@ export default function AsteroidsPage() {
       </p>
 
       <div className="mt-10">
-        <AsteroidList />
+        <Suspense fallback={<AsteroidListSkeleton />}>
+          <AsteroidList />
+        </Suspense>
       </div>
+    </div>
+  );
+}
+
+function AsteroidListSkeleton() {
+  return (
+    <div className="space-y-3" aria-busy="true" aria-label="Memuat data asteroid dari NASA">
+      {[0, 1, 2].map((i) => (
+        <Card key={i} className="space-y-3">
+          <div className="h-4 w-1/3 animate-pulse rounded bg-void-raised" />
+          <div className="h-3 w-1/2 animate-pulse rounded bg-void-raised" />
+        </Card>
+      ))}
     </div>
   );
 }

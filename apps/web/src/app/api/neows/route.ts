@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { fetchNearEarthObjects, NasaNeoWsError } from "@cosmos/nasa";
+import { fetchNearEarthObjects } from "@cosmos/nasa";
 
 export const revalidate = 60 * 60 * 6;
 
@@ -18,7 +18,7 @@ export async function GET() {
     return NextResponse.json(asteroids);
   } catch (error) {
     const message =
-      error instanceof NasaNeoWsError ? error.message : "Terjadi kesalahan tak terduga.";
+      error instanceof Error && error.name === "NasaNeoWsError" ? error.message : "Terjadi kesalahan tak terduga.";
     return NextResponse.json({ error: message }, { status: 502 });
   }
 }

@@ -2,7 +2,12 @@ import type { NearEarthObject } from "@cosmos/types";
 
 const NEOWS_FEED_ENDPOINT = "https://api.nasa.gov/neo/rest/v1/feed";
 
-export class NasaNeoWsError extends Error {}
+export class NasaNeoWsError extends Error {
+  constructor(message: string) {
+    super(message);
+    this.name = "NasaNeoWsError";
+  }
+}
 
 function todayISODate(): string {
   return new Date().toISOString().slice(0, 10);
@@ -32,6 +37,8 @@ export async function fetchNearEarthObjects(
       // NeoWs data untuk tanggal tertentu tidak berubah setelah dipublikasi
       // — cache beberapa jam cukup aman dan melindungi dari rate limit.
       next: { revalidate: 60 * 60 * 6 },
+      // Jangan biarkan halaman menunggu NASA tanpa batas.
+      signal: AbortSignal.timeout(8000),
     });
   } catch {
     throw new NasaNeoWsError("Gagal menghubungi NASA NeoWs API (kemungkinan masalah jaringan).");

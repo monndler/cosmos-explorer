@@ -60,6 +60,7 @@ Dibangun sebagai monorepo (pnpm + Turborepo) dengan Next.js App Router di sisi a
 - **Explore** — Diagram tata surya interaktif dan halaman detail planet
 - **Compare** — Perbandingan dua objek secara langsung
 - **Missions** — Daftar dan detail misi dengan filter status
+- **Asteroid Tracker** — Asteroid dekat Bumi hari ini dari NASA NeoWs
 - **NASA Integration** — Klien APOD server-side dengan validasi, cache 6 jam, dan fallback jujur
 
 ---
@@ -113,7 +114,7 @@ Edit `apps/web/.env.local`:
 NASA_API_KEY=your_key_here
 ```
 
-> Saat ini `NASA_API_KEY` **tidak dipakai**. APOD memakai API baru NASA Science yang tidak butuh key. Variabel ini disiapkan untuk integrasi NASA lain (mis. Near Earth Objects) dan tidak boleh di-commit.
+> `NASA_API_KEY` dipakai oleh Asteroid Tracker (NeoWs). APOD memakai API baru NASA Science yang tidak butuh key. Jangan commit file `.env.local`. Opsional: isi `NEXT_PUBLIC_SITE_URL` setelah deploy supaya gambar pratinjau saat tautan dibagikan memakai domain yang benar.
 
 ### 4. Start Development Server
 
@@ -308,6 +309,7 @@ Respons di-cache 6 jam (`revalidate = 21600`).
 | `/explore` | Diagram tata surya interaktif |
 | `/explore/planets/[slug]` | Detail planet / planet katai / Bulan |
 | `/compare` | Perbandingan dua objek |
+| `/explore/asteroids` | Asteroid yang melintas dekat Bumi hari ini (NeoWs) |
 | `/missions` | Daftar misi luar angkasa dengan filter status |
 | `/missions/[slug]` | Detail misi: ringkasan, objek terkait, sumber |
 
@@ -367,7 +369,7 @@ Jalankan dari root repo.
 - [x] Phase 4 — NASA Integration (APOD)
 - [ ] Phase 5 — Misi NASA (`/missions`) dan Near Earth Objects
 - [ ] Phase 6 — Konten lanjutan (Matahari, lengkapi Bumi, objek Deep Space, gambar objek)
-- [ ] Phase 7 — Quality (ESLint, test, halaman not-found/error, favicon & metadata OG)
+- [ ] Phase 7 — Quality: halaman not-found/error, favicon, metadata OG selesai; ESLint dan test belum
 - [ ] Phase 8 — Deployment
 
 ### Prioritas Berikutnya
@@ -375,7 +377,7 @@ Jalankan dari root repo.
 - [x] Halaman `/missions` (14 misi, data di `data/missions/missions.json`)
 - [x] Data Matahari (`data/planets/sun.json`) terdaftar di `planets.ts`
 - [x] `earth.json` lengkap (overview, didYouKnow, missions)
-- [ ] Integrasi NASA Near Earth Objects (cek dulu apakah endpoint-nya masih aktif; NASA sedang memindahkan/mengarsipkan beberapa API lama)
+- [x] Asteroid Tracker (`/explore/asteroids`, data NASA NeoWs). Perlu `NASA_API_KEY`; pantau jika NASA memindahkan API ini seperti APOD
 - [ ] Tambah gambar objek dari sumber NASA yang lisensinya sudah diverifikasi
 - [ ] Pasang ESLint dan mulai tulis test (mulai dari fungsi murni di `packages/astronomy`)
 
@@ -431,7 +433,6 @@ Mengikuti [Conventional Commits](https://www.conventionalcommits.org/):
 | 4 | Belum ada ESLint config | `pnpm lint` meminta setup interaktif |
 | 5 | Belum ada test | `pnpm test` tidak menjalankan apa-apa |
 | 6 | Jumlah satelit Jupiter (95) dan Saturnus (146) kemungkinan sudah usang | Verifikasi ulang ke NASA/JPL sebelum publish |
-| 7 | Belum ada `not-found`, `error`, dan `loading` page | Tampilan default Next.js |
 
 ### Common Issues
 
@@ -459,9 +460,9 @@ Ctrl+Shift+P > "TypeScript: Restart TS Server"
 
 ## 📄 License
 
-Lisensi belum ditentukan. Tambahkan file `LICENSE` lalu perbarui bagian ini.
+Kode proyek ini dilisensikan di bawah **MIT License**. Lihat file [LICENSE](LICENSE).
 
-Data dan gambar bersumber dari NASA Open APIs dan NASA/JPL Solar System Exploration. Detail sumber per objek ada di halaman masing-masing.
+Lisensi MIT hanya mencakup kode dan tulisan asli proyek ini. Data dan gambar dari sumber luar tunduk pada ketentuan pemiliknya masing-masing: konten NASA umumnya bebas hak cipta di AS namun sebagian gambar milik pihak ketiga, foto APOD sering dimiliki fotografernya (kredit ditampilkan di kartu APOD), dan konten ESA punya ketentuan sendiri. Detail sumber per objek ada di halaman masing-masing.
 
 ---
 

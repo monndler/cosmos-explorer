@@ -1,5 +1,5 @@
 import { Card } from "@cosmos/ui";
-import { fetchNearEarthObjects, NasaNeoWsError } from "@cosmos/nasa";
+import { fetchNearEarthObjects } from "@cosmos/nasa";
 import { formatMissDistanceInLunarDistances, formatVelocityKmH } from "@cosmos/astronomy";
 
 /** Asteroid biasanya berukuran ratusan meter — lebih terbaca dalam meter
@@ -78,7 +78,7 @@ export async function AsteroidList() {
     );
   } catch (error) {
     const message =
-      error instanceof NasaNeoWsError
+      error instanceof Error && error.name === "NasaNeoWsError"
         ? error.message
         : "Terjadi kesalahan tak terduga saat memuat data NASA NeoWs.";
     return <Fallback message={message} />;

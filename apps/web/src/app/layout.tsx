@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Newsreader, Inter, IBM_Plex_Mono } from "next/font/google";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
@@ -26,13 +26,36 @@ const dataFont = IBM_Plex_Mono({
   weight: ["400", "500"],
 });
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL;
+const SITE_TITLE = "Cosmos Explorer — Belajar Astronomi dari Data NASA";
+const SITE_DESCRIPTION =
+  "Jelajahi tata surya, planet, bintang, galaksi, dan misi luar angkasa melalui data dan sumber resmi NASA.";
+
 export const metadata: Metadata = {
+  // Hanya diset kalau NEXT_PUBLIC_SITE_URL ada. Di Vercel, Next memakai domain
+  // deployment otomatis kalau ini kosong.
+  ...(SITE_URL ? { metadataBase: new URL(SITE_URL) } : {}),
   title: {
-    default: "Cosmos Explorer — Belajar Astronomi dari Data NASA",
+    default: SITE_TITLE,
     template: "%s · Cosmos Explorer",
   },
-  description:
-    "Jelajahi tata surya, planet, bintang, galaksi, dan misi luar angkasa melalui data dan sumber resmi NASA.",
+  description: SITE_DESCRIPTION,
+  openGraph: {
+    type: "website",
+    locale: "id_ID",
+    siteName: "Cosmos Explorer",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+  },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#05070D",
 };
 
 export default function RootLayout({
